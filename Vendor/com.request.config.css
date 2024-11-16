@@ -1,0 +1,449 @@
+/* Estilo para quitar las flechas de los inputs tipo number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+
+.pre{
+
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: 9999;
+
+}
+
+*{
+
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-size:20px;
+    font-family:caviarDreams;
+    transition:all 300ms;
+
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    overflow:hidden;
+    background-image:url(../Assets/74.png);
+    background-position:center;
+    background-size: cover;
+
+}
+
+.QR{
+
+    width:280px;
+    height:280px;
+    border-radius:20px;
+    background-color:#FFFFFF;
+    position:absolute;
+    right:40px;
+    top:calc(50px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction: column;
+
+}
+
+img{
+
+    width:250px;
+    height:250px;
+    position:absolute;
+
+
+}
+
+.LogPage{
+
+    width:80%;
+    height:80%;
+     background: rgba( 28, 28, 28, 0.4 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 15px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position:absolute;
+    border-radius:20px;
+    display:none;
+
+}
+
+.GetCode{
+
+    width:400px;
+    height:400px;
+    background: rgba( 28, 28, 28, 0.4 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 15px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position:absolute;
+    border-radius:20px;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction: column;
+    animation: bounceIn 0.5s;
+
+
+}
+
+.SensePath{
+
+    width:auto;
+    position:absolute;
+    top:30px;
+    left:35px;
+    color:#FFFFFF
+
+}
+
+.SensePath ion-icon{
+
+    color:#9b9b9b;
+    position:relative;
+    top:4px;
+
+}
+
+
+.TitleScale1{
+
+    position:absolute;
+    top:100px;
+    color:#FFFFFF;
+    font-size:25px;
+    left:35px;
+    font-family:caviarDreams;
+
+}
+
+.DescriptionScale1{
+
+    position:absolute;
+    top:150px;
+    color:#cccaca;
+    font-size:18px;
+    left:35px;
+
+
+}
+
+
+.GoToCode{
+
+    width:auto;
+    height:30px;
+    position:absolute;
+    right:120px;
+    bottom:30px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:20px;
+    background-color: #c39f5c;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction: column;
+    font-family: caviarDreamsBold;
+    font-size: 15px;;
+    color:#341d14;
+    cursor: pointer;
+
+}
+
+.GoToCode::selection, .SendCode::selection{
+
+    background-color: transparent;
+
+}
+
+.SendCode{
+
+    width:auto;
+    height:30px;
+    position:absolute;
+    right:calc(50% - 55px);
+    bottom:30px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:20px;
+    background-color: #c39f5c;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction: column;
+    font-family: caviarDreamsBold;
+    font-size: 15px;;
+    color:#341d14;
+    cursor: pointer;
+
+
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 1040px) {
+
+
+    body{
+
+        background-color: #000000;
+
+    }
+
+    .LogPage{
+
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0px;
+        border-radius:0px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        flex-direction:column;
+        border: none;
+
+    }
+
+    .GetCode{
+
+        width:100%;
+        height:100%;
+        position:absolute;
+        bottom:0px;
+        border-radius:0px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        flex-direction:column;
+        border: none;
+
+    }
+
+    .QR{
+
+        left:calc(50% - 140px)
+
+    }
+
+    .SensePath{
+
+        display: none;
+
+    }
+
+    .TitleScale1{
+
+        width:100%;
+        left:0px;
+        top:370px;
+        font-size: 20px;
+
+    }
+
+    .DescriptionScale1{
+
+        top:450px;
+        width:100%;
+        left:0px;
+        padding-left:20px;
+        padding-right:20px;
+
+    }
+
+    .GoToCode{
+
+        
+        right:calc(50% - 53px);
+
+    }
+
+    .Instructions, .Instructions2{
+
+        visibility: hidden;
+
+    }
+
+    .link{
+
+        width:100%;
+        background-color: #1c1c1d;
+        display:none;
+        position:absolute;
+
+    }
+
+
+}
+
+.Instructions{
+
+    width:70%;
+    height:100px;
+    display: flex;
+    justify-content:left;
+    height:10px;
+    font-size:15px;
+    position:absolute;
+    top:200px;
+    left:35px;
+    color:#cccaca;
+    flex-wrap: wrap;
+
+}
+
+.Instructions2{
+
+    width:70%;
+    height:100px;
+    display: flex;
+    justify-content:left;
+    height:10px;
+    font-size:15px;
+    position:absolute;
+    top:280px;
+    left:35px;
+    color:#cccaca;
+    flex-wrap: wrap;
+
+
+}
+
+.Instructions i, .Instructions2 i{
+
+    color:#1c1c1d
+
+}
+
+.Demo{
+
+    width:30px;
+    height:30px;
+    background-color: #FFFFFF;
+    position: relative;
+    margin-left:10px;
+    margin-right:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    border-radius:8px;
+    font-size:15px;
+    bottom:5px;
+
+}
+
+.link{
+
+    position:absolute;
+    bottom:50px;
+    font-size:15px;
+    font-family:caviarDreamsBold;
+    color:#cfb57a;
+    left:50px;
+    cursor: pointer;
+
+}
+
+.IconFather{
+
+    width:90px;
+    height:90px;
+    background-color: #FFFFFF;
+    position:absolute;
+    top:30px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow: hidden;
+
+}
+
+.IconFather div{
+
+    width:60px;
+    height:60px;
+    background-image:url(../Assets/code.gif);
+    background-position:center;
+    background-size:cover;
+
+
+}
+
+.TitleScale3{
+
+    position:absolute;
+    top:140px;
+    color:#ffd8d8
+
+}
+
+.GetCodesInputs{
+
+    width:100%;
+    height: 70px;
+    position:absolute;
+    top:190px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#FFFFFF;
+    font-size:30px;
+
+}
+
+
+
+.GetCodesInputs input{
+
+    width:40px;
+    height:40px;
+    margin:5px;
+    border:2px solid #b88648;
+    border-radius:5px;
+    background-color: transparent;
+    outline:none;
+    color:#FFFFFF;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}

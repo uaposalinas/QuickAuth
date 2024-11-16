@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLabs Passkey</title>
+</head>
+<body>
+    
+    <form action="../request/" method="get" class="FormControl">
+
+        <input type="text" name="UserName" placeholder="Escribe tu nombre de usuario">
+        <input type="text" name="PasskeyID" class="PasskeyID" hidden>
+        <input type="text" name="PasskeyAuthCode" class="PasskeyLogCode" hidden>
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</body>
+
+<script>
+
+    const FormControl = document.querySelector('.FormControl');
+    const PasskeyID = document.querySelector('.PasskeyID');
+    const PasskeyLogCode = document.querySelector('.PasskeyLogCode');
+
+    FormControl.addEventListener('submit', e=>{
+
+        e.preventDefault()
+
+        //Crear PasskeyID
+
+        function CreateLogToken(){
+
+            const Limit = 50;
+            var Exit = '';
+
+            for(let Aument = 0; Aument < Limit; Aument++){
+
+                const CreateRandom = Math.floor(Math.random() * 10);
+
+                Exit += CreateRandom;
+
+            }
+
+            return Exit;
+
+    }
+
+        //Crear PassKeyCode 
+
+        function CreateAuthCode(){
+
+            const Limit = 6;
+            var Exit = '';
+
+            for(let aument = 0; aument < Limit; aument++){
+
+                const GenerateCode = Math.floor(Math.random() * 10);
+
+                Exit += GenerateCode;
+
+            }
+
+            return Exit;
+
+        }
+
+        //Escribir los codigos generados 
+
+        PasskeyID.value = CreateLogToken();
+        PasskeyLogCode.value = CreateAuthCode();
+
+        //Enviar los datos 
+
+        FormControl.submit()
+
+    })
+
+</script>
+</html>

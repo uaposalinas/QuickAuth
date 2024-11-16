@@ -1,0 +1,20 @@
+@font-face {
+    font-family:clocker;
+    src: url(Clocker\ Regular.ttf);
+}
+
+@font-face {
+    font-family:clockerBold;
+    src: url(Clocker\ Bold.ttf);
+}
+
+@font-face {
+    font-family:clockerItalic;
+    src: url(Clocker\ Italic.ttf);
+}
+
+@font-face {
+    font-family:clockerItalicBold;
+    src: url(Clocker\ Bold\ Italic.ttf);
+}
+
