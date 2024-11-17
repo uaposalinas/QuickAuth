@@ -10,55 +10,6 @@
 
 </head>
 <body>
-
-<?php
-
-    if(isset($_GET["Token"])){
-
-        $Key = $_GET["Token"];
-        $GetUserName = $_GET["?UserName"];
-
-        $ServerName = "sql212.infinityfree.com";
-        $UserName = "if0_35493604";
-        $Password = "6c32j0hq";
-        $DataBaseName = "if0_35493604_devlabsauth";
-
-        $Connection = new mysqli($ServerName, $UserName, $Password, $DatabaseName);
-
-        $DoQuery = "SELECT Code, Status FROM root WHERE PassKeyID = '$Key'";
-        $QueryResults = $Connection -> query($DoQuery);
-
-        if($QueryResults -> num_rows > 0){
-
-            $Row = $QueryResults -> fetch_assoc();
-
-            $GetCode = $Row["Code"];
-            $GetQueryStatus = $Row["Status"];
-
-            if($GetQueryStatus == "Resolved" || $GetQueryStatus == 'TimeOutExed'){
-
-                echo "<script> window.location.href = 'TimedOut' </script>";
-
-            }
-
-            $GetPassConnection = new mysqli($ServerName, $UserName, $Password, $DatabaseName);
-            $GetPassQuery = "SELECT Password FROM accounts WHERE UserName = '$GetUserName'";
-            $GetPassResult  = $Connection -> query($GetPassQuery);
-            
-            $GetPassValue = $GetPassResult -> fetch_assoc()["Password"];
-
-            echo "<script> const GetUserName = '$GetUserName'; const GetCode = '$GetCode'; GetPass='$GetPassValue' </script>";
-
-        }
-
-
-    }else{
-
-        echo "<script> document.body.style.display = 'none'; </script>";
-
-    }
-
-?>
     
     <div class="AuthPage" style="display:flex;">
 
