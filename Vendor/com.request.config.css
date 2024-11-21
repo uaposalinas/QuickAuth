@@ -1,3 +1,69 @@
+
+.loader {
+    display: flex;
+  }
+  
+  .loader .dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #212121;
+    background: #16b0c1;
+    animation: jump 0.8s ease-in-out infinite alternate;
+  }
+  
+  @keyframes jump {
+    100% {
+      background: #661e92;
+      transform: translateY(-3rem) scale(1.9);
+    }
+  }
+  
+  .loader .dot:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .loader .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .loader .dot:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .loader .dot:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .loader .dot:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  
+
+  .loader {
+    width: 60px;
+    height: 60px;
+   }
+   
+   .loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-top: 2px solid #8900FF;
+    border-right: 2px solid transparent;
+    animation: spinner8217 0.8s linear infinite;
+   }
+   
+   @keyframes spinner8217 {
+    to {
+     transform: rotate(360deg);
+    }
+   }
+
 /* Estilo para quitar las flechas de los inputs tipo number */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -9,7 +75,6 @@ input[type="number"] {
     -moz-appearance: textfield;
     appearance: none;
 }
-
 
 .pre{
 
@@ -43,7 +108,7 @@ body{
     text-align:center;
     flex-direction:column;
     overflow:hidden;
-    background-image:url(../Assets/74.png);
+    background-image:url(../Assets/78.png);
     background-position:center;
     background-size: cover;
 
@@ -449,8 +514,348 @@ img{
 }
 
 
-.RequestLogInfo{
+.RequestInfo{
 
-    
+    width:1095px;
+    height:520px;   
+    background: rgba( 28, 28, 28, 0.4 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 15px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position:absolute;
+    border-radius:20px;
+    overflow: hidden;
 
 }
+
+.GetUserNameInfo{
+
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+
+}
+
+.GetUserNameInfo .Sides{
+
+    width:50%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+
+}
+
+.Sides:nth-child(1){
+
+    align-items:start;
+    padding-left:50px;
+
+}
+
+.Letter{
+
+    width:auto;
+    height: 40px;
+    border-radius:20px;;
+    min-width: 20px;
+    padding-left:5px;
+    padding-right:10px;
+    background-color: #1b183f;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    border:1px solid rgba(255, 255, 255, 0.04);
+
+}
+
+.Letter .Important{
+
+    width:auto;
+    height:30px;
+    background-color: #5a4fcf;
+    color:#FFFFFF;
+    font-size:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:20px;    
+    font-family:caviarDreamsBold;
+    margin-right:10px;
+
+}
+
+.Letter p{
+
+    color:#FFFFFF;
+    font-size:15px;
+
+}
+
+.Sides:nth-child(1) .Title{
+
+    width:80%;
+    height:auto;
+    text-align:left;
+    color:#FFFFFF;  
+    font-size:50px;
+    margin-top:20px;
+
+}
+
+.ServiceIdentiderPhotoContainer{
+
+    width:70px;
+    height:70px;
+    background-color: #FFFFFF;
+    border-radius:15px;
+    padding:5px;
+
+}
+
+.Identifer{
+
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    background-image:url(https://eonix.devlabsco.space/Store/images/icons/com.logo.six.png);
+    background-size:cover;
+    background-position:center;
+
+}
+
+.ServiceLoginTitle{
+
+    font-family:caviarDreamsBold;
+    color:#FFFFFF;
+    font-size:22px;
+    margin-top:15px;
+
+}
+
+.ServiceName{
+
+    font-family:caviarDreamsBold;
+    color:#FFFFFF;
+    font-size:20px;
+    cursor: pointer;
+    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+.GetUserNameForLogin{
+
+    width:350px;
+    height:40px;
+    margin-top:20px;
+    outline:none;
+    background-color: transparent;
+    border:1px solid #c39f5c;
+    border-radius:20px;
+    padding-left:15px;
+    font-size:15px;
+    font-family:caviarDreamsBold;
+    color:#FFFFFF;
+
+}
+
+.ConfirmButton{
+
+    width:auto;
+    height:30px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: #7668AF;
+    cursor: pointer;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:14px;
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    font-family: caviarDreamsBold;
+    color:#FFFFFF;
+
+}
+
+.CreateAccount{
+
+    font-size:13px;
+    font-family:caviarDreamsBold;
+    color:#c39f5c;
+    cursor: pointer;
+    position: absolute;
+    bottom:20px;
+    left:30px;
+
+}
+
+.Preloader{
+
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(0, 0, 0, 0.644);
+    z-index:2;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:all 600ms;
+
+}
+
+
+.GetUserNameContainer{
+
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+
+}
+
+.SelectLoginMethod{
+
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    animation:fadeInRight 0.5s;
+    opacity: 1;
+
+}
+
+.UserProfilePhotoContainer{
+
+    width: 140px;
+    height:140px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    border-radius:50%;
+    border:5px dashed #c39f5c;
+    box-shadow: 15px 5px 5px rgba(0, 0, 0, 0.644);
+    animation: Preload 3s ease;
+    transition:all 900ms;
+
+}
+
+.UserProfilePhoto{
+
+    width:120px;
+    height:120px;
+    background-image:url(../Assets/0501200607356-2.jpg);
+    background-position:center;
+    background-size:cover;
+    border-radius:50%;
+
+}
+
+.AccountName{
+
+    font-family:caviarDreamsBold;
+    font-size:20px;
+    margin-top:15px;
+   color:#FFFFFF;
+
+
+}
+
+
+.LoginOptions{
+
+    width: 60%;
+    height:auto;
+    min-height:40px;
+    margin-top:15px;
+    position: relative;
+
+
+}
+
+
+.LoginOptions .Option{
+
+    width:100%;
+    height:40px;
+    background-color:rgba(6, 13, 20, 0.527);
+    margin-top:15px;
+    border-radius:7px;
+    border: 1px solid rgba( 255, 255, 255, 0.08 );
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.LoginOptions .Option i{
+
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#7668AF
+
+}
+
+.LoginOptions .Option p{
+
+    width:calc(100% - 45px);
+    height:100%;
+    position: absolute;
+    right:0px;
+    text-align:left;
+    font-family:caviarDreams;
+    font-size:13px;
+    color:#FFFFFF;
+    display:flex;
+    align-items:center;
+
+}
+
+
+.ChangeTextState{
+
+    animation: fadeInUp 0.5s;
+
+}
+

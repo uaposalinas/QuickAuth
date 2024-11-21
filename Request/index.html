@@ -12,15 +12,125 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>  
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="../Vendor/com.request.config.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="shortcut icon" href="https://helloid.devlabsco.space/assets/images/logo.png" type="image/x-icon">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
 
-</head>
+    <script>
+
+        const FileLocation = "../Vendor/com.request.config.css?v="+Math.random();
+        const Styles = document.createElement('link');
+        Styles.rel = "stylesheet";
+        Styles.href = FileLocation;
+        Styles.type = "text/css";
+        document.head.appendChild(Styles)
+
+
+    </script>
+
+</head> 
 
 
 <body>
 
-    <div class="RequestInfo"></div>
+    <div class="RequestInfo">
+
+        <div class="GetUserNameInfo">
+
+            <div class="Sides">
+
+                <div class="Letter">
+
+                    <div class="Important">Nueva Característica</div>
+                    <p>Inicio de sesión rápido QuickAuth™</p>
+
+                </div>
+
+                <p class="Title">
+
+                    Escribe tu @
+                    <br>
+                    e inicia sesión
+
+                </p>
+
+                <div class="CreateAccount">Crear Cuenta</div>
+
+            </div>
+            <div class="Sides" style="position:relative;">
+
+                <div class="GetUserNameContainer">
+
+                    
+                <div class="ServiceIdentiderPhotoContainer">
+
+                    <div class="Identifer"></div>
+
+                </div>
+
+                <p class="ServiceLoginTitle">Iniciar Sesión en:</p>
+                <p class="ServiceName">Eonix</p>
+                
+                <input type="text" class="GetUserNameForLogin" name="GetUserNameForLogin" placeholder="Escribe tu nombre de usuario">
+
+                <div class="ConfirmButton">Siguiente</div>
+
+                </div>
+
+                <div class="SelectLoginMethod">
+
+                    <div class="UserProfilePhotoContainer">
+
+                        <div class="UserProfilePhoto"></div>
+
+                    </div>
+                    <p class="AccountName">Alejandro Salinas</p>
+
+                    <div class="LoginOptions">
+
+                       <div class="Option">
+
+                        <i class="fi fi-rr-keyboard"></i>                        
+                        <p>Contraeña</p>
+
+                       </div>
+
+                       <div class="Option">
+
+                        <i class="fi fi-ss-qr-scan" style="font-size:17px;"></i>                        
+                        <p>Código QR o Passkey</p>
+
+                       </div>
+                       <div class="Option">
+
+                        <i class="fi fi-rr-at" style="font-size:17px;"></i>
+                        <p>Correo Electrónico</p>
+
+                       </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+            <div class="Preloader">
+
+                  <div class="loader"></div>
+                  
+
+            </div>
+
+        </div>
+
+    </div>
 
     <div class="LogPage">
 
@@ -70,9 +180,10 @@
 </body>
 
 <script defer src="../Vendor/qrcode.min.js"></script>
-<script defer src="../Vendor/com.request.config.js"></script>
+<!--<script defer src="../Vendor/com.request.config.js"></script>-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="../Vendor/com.request.getin.js?v=55"></script>
 
 
 </html>
