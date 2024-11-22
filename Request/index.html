@@ -45,6 +45,8 @@
 
             <div class="Sides">
 
+                <i class="fi fi-br-angle-small-left BackPosition"></i>
+
                 <div class="Letter">
 
                     <div class="Important">Nueva Característica</div>
@@ -77,7 +79,7 @@
                 <p class="ServiceLoginTitle">Iniciar Sesión en:</p>
                 <p class="ServiceName">Eonix</p>
                 
-                <input type="text" class="GetUserNameForLogin" name="GetUserNameForLogin" placeholder="Escribe tu nombre de usuario">
+                <input type="text" class="GetUserNameForLogin" name="GetUserNameForLogin" placeholder="Escribe tu nombre de usuario" autocomplete="off">
 
                 <div class="ConfirmButton">Siguiente</div>
 
@@ -90,14 +92,22 @@
                         <div class="UserProfilePhoto"></div>
 
                     </div>
-                    <p class="AccountName">Alejandro Salinas</p>
+                    <p class="AccountName">Nombre de Usuario</p>
 
                     <div class="LoginOptions">
 
                        <div class="Option">
 
                         <i class="fi fi-rr-keyboard"></i>                        
-                        <p>Contraeña</p>
+                        <p>Contraseña</p>
+
+                       </div>
+
+         
+                       <div class="Option">
+
+                        <i class="fi fi-rr-at" style="font-size:17px;"></i>
+                        <p>Correo Electrónico</p>
 
                        </div>
 
@@ -107,14 +117,28 @@
                         <p>Código QR o Passkey</p>
 
                        </div>
-                       <div class="Option">
-
-                        <i class="fi fi-rr-at" style="font-size:17px;"></i>
-                        <p>Correo Electrónico</p>
-
-                       </div>
 
                     </div>
+
+                </div>
+
+                <div class="LoginWithPassword">
+
+                    <div class="StepIdentifer"></div>
+                    <p class="AccountName">Escribe tu contraseña</p>
+
+                    <input type="text" class="GetUserPasswordForLogin" name="GetUserPasswordForLogin" placeholder="Escribe tu contraseña" autocomplete="off">
+
+                    <div class="LoginWithPasswordButton" style="right: unset !important; bottom:30px; height:35px;">Iniciar Sesión</div>
+
+
+                </div>
+
+                <div class="LoginWithMail">
+
+                    <div class="StepIdentiferVariable"></div>
+                    <p class="ShowMailProcess">Te lo estamos enviando</p>
+                    <div class="ProcessDescripter Spliter">Usualmente esto tarda hasta 3 segundos</div>
 
                 </div>
 
@@ -184,6 +208,7 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="../Vendor/com.request.getin.js?v=55"></script>
+<script src="../Vendor/com.mail.login.js"></script>
 
 
 </html>

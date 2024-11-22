@@ -1,3 +1,60 @@
+.GetUserNameContainer{
+
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+
+}
+
+.SelectLoginMethod{
+
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    animation:fadeInRight 0.5s;
+    opacity: 1;
+
+}
+
+
+.LoginWithPassword{
+
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    animation:fadeInRight 0.5s;
+
+
+}
+
+.LoginWithMail{
+
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    animation:fadeInRight 0.5s;
+
+}
 
 .loader {
     display: flex;
@@ -673,7 +730,25 @@ img{
 
 }
 
-.ConfirmButton{
+
+.GetUserPasswordForLogin{
+
+    width:350px;
+    height:40px;
+    margin-top:20px;
+    outline:none;
+    background-color: transparent;
+    border:1px solid #c39f5c;
+    border-radius:20px;
+    padding-left:15px;
+    font-size:15px;
+    font-family:caviarDreamsBold;
+    color:#FFFFFF;
+
+
+}
+
+.ConfirmButton, .LoginWithPasswordButton{
 
     width:auto;
     height:30px;
@@ -727,33 +802,7 @@ img{
 }
 
 
-.GetUserNameContainer{
 
-    width:100%;
-    height:100%;
-    position:absolute;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    flex-direction:column;
-
-}
-
-.SelectLoginMethod{
-
-    width:100%;
-    height:100%;
-    position:absolute;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    flex-direction:column;
-    animation:fadeInRight 0.5s;
-    opacity: 1;
-
-}
 
 .UserProfilePhotoContainer{
 
@@ -775,10 +824,32 @@ img{
 
     width:120px;
     height:120px;
-    background-image:url(../Assets/0501200607356-2.jpg);
+    background-image:url(../Assets/eye.png);
     background-position:center;
     background-size:cover;
     border-radius:50%;
+
+}
+
+.StepIdentifer{
+
+    width:90px;
+    height:90px;
+    background-image:url(../Assets/password.gif);
+    background-position:center;
+    background-size:cover;
+    border-radius:10px;
+
+}
+
+.StepIdentiferVariable{
+
+    width:90px;
+    height:90px;
+    background-image:url(../Assets/Sending.gif);
+    background-position:center;
+    background-size:cover;
+    border-radius:10px;
 
 }
 
@@ -789,6 +860,25 @@ img{
     margin-top:15px;
    color:#FFFFFF;
 
+
+}
+
+.CurrentProcess, .ShowMailProcess{
+
+    font-family:caviarDreamsBold;
+    font-size:20px;
+    margin-top:15px;
+   color:#FFFFFF;
+
+
+}
+
+.ProcessDescripter{
+
+    font-family:caviarDreams;
+    font-size:18px;
+    margin-top:10px;
+    color:#9b9b9b;
 
 }
 
@@ -859,3 +949,17 @@ img{
 
 }
 
+
+.BackPosition{
+
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:20px;
+    left:20px;
+    color:#c39f5c;
+    cursor: pointer;
+    font-size:25px;
+    display: none;
+
+}

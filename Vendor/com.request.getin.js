@@ -67,14 +67,19 @@ function InitLoginService(){
 
                 StopPreloader();
 
-                
-
                 Letter.style.display = "none";
                 GetUserNameContainer.style.display = "none";
                 SelectLoginMethod.style.opacity = "1";
                 CreateAccount.innerHTML = "Cambiar de cuenta";
                 Title.classList.add('ChangeTextState');
                 Title.innerHTML = "Selecciona una <br> opcion para iniciar sesión";
+
+                setTimeout(() => {
+                    
+                    Title.classList.remove('ChangeTextState');
+
+
+                }, 500);
 
             }, 1000);
 
@@ -98,5 +103,90 @@ function StopPreloader(){
         Preloader.style.opacity = "1";
 
     }, 350);
+
+}
+
+//ReturnPosition
+
+
+const BackPosition = document.querySelector('.BackPosition');
+
+BackPosition.addEventListener('click', ReturnToSelectMethod);
+
+function ReturnToSelectMethod(){
+
+    LoginWithPassword.style.display = "none";
+    LoginWithMail.style.display = "none";
+    SelectLoginMethod.style.display = "flex";
+
+    Title.classList.add('ChangeTextState');
+    Title.innerHTML = "Selecciona una <br> opcion para iniciar sesión";
+    BackPosition.style.display = "none";
+
+    setTimeout(() => {
+        
+        Title.classList.remove('ChangeTextState');
+
+
+    }, 500);
+
+}
+
+
+//SelectLoginMethod
+
+const LoginWithPassword = document.querySelector('.LoginWithPassword');
+const LoginWithMail = document.querySelector('.LoginWithMail');
+
+const Option = document.querySelectorAll('.Option');
+const Limit = Option.length;
+
+for(let Aument = 0; Aument < Limit; Aument++){
+
+    const Options = Option[Aument];
+
+    Options.addEventListener('click', SelectThis);
+
+    function SelectThis(e){
+
+        document.querySelector('.BackPosition').style.display = "flex";
+
+        const Position = Array.from(Option).indexOf(e.currentTarget);
+
+        if(Position == 0){
+
+            SelectLoginMethod.style.display = "none";
+            LoginWithPassword.style.display = "flex";
+            Title.classList.add('ChangeTextState');
+            Title.innerHTML = "Escribe tu <br> contraseña para iniciar sesión";
+
+            setTimeout(() => {
+                
+                Title.classList.remove('ChangeTextState');
+
+
+            }, 500);
+
+        }else if(Position == 1){
+
+            SelectLoginMethod.style.display = "none";
+            LoginWithMail.style.display = "flex";
+            Title.classList.add('ChangeTextState');
+            Title.innerHTML = "Te enviaremos un <br> correo para iniciar sesión";
+
+            setTimeout(() => {
+                
+                Title.classList.remove('ChangeTextState');
+
+
+            }, 500);
+
+        }else if(Position == 2){
+
+            alert('Login width Passkeys')
+
+        }
+
+    }
 
 }
