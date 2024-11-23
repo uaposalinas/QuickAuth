@@ -214,7 +214,7 @@
                                                                 <tr>
                                                                     <td style='width:64px;'>
 
-                                                                        <img height='auto' src='https://helloid.devlabsco.space/assets/images/logo.png' style='border:0;display:block;outline:none;text-decoration:none;width:100%;' width='64' />
+                                                                        <img alt='Hello ID Logo' height='auto' src='https://helloid.devlabsco.space/assets/images/logo.png' style='border:0;display:block;outline:none;text-decoration:none;width:100%;' width='64' />
 
                                                                     </td>
                                                                 </tr>
@@ -422,22 +422,6 @@
                 </div>
 
             </body>
-
-            <script>    
-
-                const Button = document.querySelector('.AuthButton');
-
-                Button.addEventListener('click', e=>{
-
-                    const Link = document.createElement('a');
-                    Link.href = 'https://helloid.devlabsco.space/access/login/service/QuickAuth/Response?Token=3020213541351351154654345';
-                    Link.style.display = 'none';
-                    document.body.appendChild(Link);
-                    Link.click()
-
-                })
-
-            </script>
 
             </html>
 
