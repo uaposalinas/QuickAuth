@@ -6,7 +6,7 @@
 
         $UserName = $_POST["UserName"];
 
-        $Query = "SELECT UserKey, Name, ProfilePhoto, Status FROM Accounts WHERE UserName = '$UserName'";
+        $Query = "SELECT UserKey, UserName, Name, ProfilePhoto, Status, Email, Phone FROM Accounts WHERE UserName = '$UserName'";
         $QueryResults = $Connection -> query($Query);
 
         if($QueryResults){
@@ -19,6 +19,9 @@
                 $Name = $Row["Name"];
                 $ProfilePhoto = $Row["ProfilePhoto"];
                 $Status = $Row["Status"];
+                $Email = $Row["Email"];
+                $Phone = $Row["Phone"];
+                $UserName = $Row["UserName"];
     
                 $Return = [
     
@@ -29,7 +32,10 @@
                         "UserKey" => $UserKey,
                         "Name" => $Name,
                         "ProfilePhoto" => $ProfilePhoto,
-                        "Status" => $Status
+                        "Status" => $Status,
+                        "Email" => $Email,
+                        "Phone" => $Phone,
+                        "UserName" => $UserName
     
                     ]
     

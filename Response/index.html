@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>DevLabs Passkeys</title>
+    <link rel="stylesheet" href="../Fonts/IndexFontsCaviarDreams.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../Vendor/com.response.config.css">
+
+</head>
+<body>
+    
+    <div class="AuthPage" style="display:flex;">
+
+        <div class="Icon"></div>
+        <t>Solicitud de inicio de sesión</t>
+        <p class="LoginDescriptionToken">Ocurrio un error.</p>
+
+        <div class="AuthButton">Autorizar</div>
+
+    </div>
+
+    <div class="SessionNoLogged" style="display: none;">
+
+        <div class="Icon"></div>
+        <t>Ingresa la contraseña</t>
+        <input type="password" class="GetPassword">
+        <p class="LoginDescriptionTokens LoginDescriptionTokens2">No pudimos obtener tu cuenta en este dispositivo.</p>
+
+        <div class="AuthButtons ">Continuar</div>
+
+    </div>
+
+    <div class="ShowCode" style="display:none">
+
+        <div class="Shown">
+
+            <div class="Icon"></div>
+
+            <t>Verificación de dos Factores</t>
+
+            <div class="ExitCode"> 
+                <p class="ExitCodeVar">0</p>
+                <p class="ExitCodeVar">0</p>
+                <p class="ExitCodeVar">0</p>
+                <p>-</p>
+                <p class="ExitCodeVar">0</p>
+                <p class="ExitCodeVar">0</p>
+                <p class="ExitCodeVar">0</p> 
+            </div>
+
+            <p class="Inst">Pulsa siguiente y escribe este código en el dispositivo de inicio de sesión</p>
+
+            <div class="FinishLogin">Finalizar</div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script src="../Vendor/com.response.config.js"></script>
+
+</html>

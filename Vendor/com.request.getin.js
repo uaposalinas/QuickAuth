@@ -55,7 +55,7 @@ function InitLoginService(){
         .then(response => response.json())
         .then(Information =>{
 
-            console.log(Information);
+            sessionStorage.setItem("CurrentSessionObject", JSON.stringify(Information))
             
             AccountName.innerHTML = Information.UserInfo.Name;
             UserProfilePhoto.style.backgroundImage = `url(${Information.UserInfo.ProfilePhoto})`;
@@ -82,6 +82,8 @@ function InitLoginService(){
                 }, 500);
 
             }, 1000);
+
+            
 
         })
         .catch(Err => {
@@ -173,6 +175,8 @@ for(let Aument = 0; Aument < Limit; Aument++){
             LoginWithMail.style.display = "flex";
             Title.classList.add('ChangeTextState');
             Title.innerHTML = "Te enviaremos un <br> correo para iniciar sesión";
+
+            InitMailLogService();
 
             setTimeout(() => {
                 
