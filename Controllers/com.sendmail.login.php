@@ -18,18 +18,19 @@
         $Mail = $_POST["Mail"];
         $Token = $_POST["Token"];
 
+
         try {
 
             $MailService->SMTPDebug = 0;                      
             $MailService->isSMTP();                                            
             $MailService->Host       = 'mail.devlabsco.space';                 
             $MailService->SMTPAuth   = true;                               
-            $MailService->Username   = 'securityagent@devlabsco.space';                    
+            $MailService->Username   = 'team@devlabsco.space';                    
             $MailService->Password   = 'Dv229011000$';                              
             $MailService->SMTPSecure = "ssl";           
             $MailService->Port       = 465;                                
         
-            $MailService->setFrom('securityagent@devlabsco.space', 'Inicio de sesión de Hello ID');
+            $MailService->setFrom('team@devlabsco.space', 'Inicio de sesión de Hello ID');
             $MailService->addAddress("$Mail", "$AccountName");    
      
         
