@@ -33,8 +33,10 @@ function InitMailLogService(){
     sessionStorage.removeItem('Toke');
 
     sessionStorage.setItem('Token', CreateToken(60));
+    sessionStorage.setItem('Code', CreateToken(6));
 
     const ThisToken = sessionStorage.getItem("Token");
+    const Code = sessionStorage.getItem('Code');
 
     //RemovePackCompress
     
@@ -73,7 +75,7 @@ function InitMailLogService(){
             "Content-Type": "Application/x-www-form-urlencoded",
 
         },
-        body: `AccountName=${encodeURIComponent(NewLoginRequest.Name)}&UserName=${encodeURIComponent(NewLoginRequest.UserName)}&Mail=${encodeURIComponent(NewLoginRequest.Mail)}&Token=${ThisToken}`,
+        body: `AccountName=${encodeURIComponent(NewLoginRequest.Name)}&UserName=${encodeURIComponent(NewLoginRequest.UserName)}&Mail=${encodeURIComponent(NewLoginRequest.Mail)}&Token=${ThisToken}&Code=${encodeURIComponent(Code)}`,
 
     })
     
@@ -193,7 +195,7 @@ function CheckCurrentMailStatus(){
 
                 StepIdentiferVariable.style.backgroundImage = "url(../Assets/ApprovePending.gif)";
                 ShowMailProcess.classList.add('ChangeTextState');
-                ShowMailProcess.innerHTML = "Aprovación pendiente";
+                ShowMailProcess.innerHTML = "Aprobación pendiente";
                 ProcessDescripter.classList.add("ChangeTextState");
                 ProcessDescripter.innerHTML = `Recibiste el mensaje y lo abriste, pulsa el botón "Autorizar"`;
 

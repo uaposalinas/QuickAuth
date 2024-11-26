@@ -17,6 +17,7 @@
         $ThisUserName = $_POST["UserName"];
         $Mail = $_POST["Mail"];
         $Token = $_POST["Token"];
+        $Code = $_POST["Code"];
 
 
         try {
@@ -433,7 +434,7 @@
             $MailService->send();
             require '../com.config/com.config.php';
 
-            $SaveLogin = "INSERT INTO `Requests`(`PassKeyID`, `Account`, `Code`, `Status`, `Method`) VALUES ('$Token','$ThisUserName','none','Sent','Mail')";
+            $SaveLogin = "INSERT INTO `Requests`(`PassKeyID`, `Account`, `Code`, `Status`, `Method`) VALUES ('$Token','$ThisUserName','$Code','Sent','Mail')";
             $DoSave = $Connection -> query($SaveLogin);
         
             if($DoSave){
