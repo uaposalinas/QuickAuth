@@ -11,19 +11,31 @@
         $DoUpdate = "UPDATE Requests SET Status = 'Pending' WHERE PasskeyID = '$Token'";
         $UpdateResults = $Connection -> query($DoUpdate);
 
-        if($Connection -> affected_rows > 0){
+        $UserName = "SELECT Account FROM Requests WHERE PasskeyID = '$Token'";
+        $DoQuery = $Connection -> query($UserName);
 
-            echo "Ok";
+        if($DoQuery -> num_rows > 0){
+
+            $Row = $DoQuery -> fetch_assoc();
+            $User = $Row["Account"];
+
+            echo "@$User";
 
         }else{
 
-            echo "!OK";
+            echo "error";
+
+        }
+
+        if(!$Connection -> affected_rows > 0){
+
+            
 
         }
 
     }else{
 
-        echo "Error";
+        echo "error";
 
     }
 

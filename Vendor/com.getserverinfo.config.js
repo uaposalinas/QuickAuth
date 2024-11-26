@@ -1,4 +1,5 @@
 const App = window;
+const LoginDescriptionToken = document.querySelector('.LoginDescriptionToken');
 
 App.addEventListener("load", InitService);
 
@@ -9,7 +10,7 @@ function InitService(){
     const GetValues = PartUrl[1];
     const Token = GetValues.substr(6, 100);
 
-    fetch('../Controllers/com.checkresponse.controller.php', {
+    fetch('../../Controllers/com.checkresponse.controller.php', {
 
         method: "POST",
         headers: {
@@ -23,8 +24,26 @@ function InitService(){
     .then(response => response.text())
     .then(Results => {
 
-        console.log(Results);
+        const RemoveSpaces = Results.substr(4, 150);
+        console.log(RemoveSpaces)
+
+        if(RemoveSpaces == "error"){
+
+            window.location.href = "https://helloid.devlabsco.space"; 
+
+        }else{
+
+            LoginDescriptionToken.innerHTML = `Estás intentando iniciar sesión en ${RemoveSpaces} utilizando DevLabs Passkeys pulsa el botón Autorizar y escribe el código en el dispositivo donde estás tratando de iniciar sesión si es necesario.`;
+
+        }
 
     })
+    .catch(Redirect => {
+
+        window.location.href = "https://helloid.devlabsco.space?Cause="+Redirect;
+
+    })
+
+
 
 }
