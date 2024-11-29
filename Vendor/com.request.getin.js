@@ -57,6 +57,16 @@ function InitLoginService(){
 
             sessionStorage.setItem("CurrentSessionObject", JSON.stringify(Information))
             
+//            <link rel="preload" href="ruta/a/tu-imagen.jpg" as="image">
+
+            const CreatePreload = document.createElement('link');
+            CreatePreload.rel = "preload";
+            CreatePreload.href = Information.UserInfo.ProfilePhoto;
+            CreateAccount.as = "image";
+
+            document.head.appendChild(CreatePreload);
+
+
             AccountName.innerHTML = Information.UserInfo.Name;
             UserProfilePhoto.style.backgroundImage = `url(${Information.UserInfo.ProfilePhoto})`;
 
@@ -162,6 +172,8 @@ for(let Aument = 0; Aument < Limit; Aument++){
             Title.classList.add('ChangeTextState');
             Title.innerHTML = "Escribe tu <br> contraseña para iniciar sesión";
 
+            InitPassLogService();
+
             setTimeout(() => {
                 
                 Title.classList.remove('ChangeTextState');
@@ -193,4 +205,87 @@ for(let Aument = 0; Aument < Limit; Aument++){
 
     }
 
+}
+
+
+
+function InitPassLogService(){
+
+    const GetUserPasswordForLogin = document.querySelector('.GetUserPasswordForLogin');
+    const LoginWithPasswordButton = document.querySelector('.LoginWithPasswordButton');
+
+    GetUserPasswordForLogin.addEventListener('keydown', ConfirmToSend);
+    LoginWithPasswordButton.addEventListener('click', ConfirmPassword)
+
+    function ConfirmToSend(e){
+
+        const Key = e.keyCode;
+
+        if(Key == 13){
+
+            ConfirmPassword();
+
+        }
+
+    }
+
+
+}
+
+
+function ConfirmPassword(){
+
+    const PasswordInput = document.querySelector('.GetUserPasswordForLogin');
+    const Password = PasswordInput.value;
+    const AccountObject = JSON.parse(sessionStorage.getItem('CurrentSessionObject'));
+    const UserName = AccountObject.UserInfo.UserName;
+
+    if(Password.trim() === ""){
+
+        alert('Vacio')
+
+    }else{
+
+        
+    fetch('../Controllers/com.check.pass.log.php', {
+
+        method: "POST",
+        headers:{
+
+            "Content-Type": "Application/x-www-form-urlencoded",
+
+        },
+        body: `Password=${encodeURIComponent(Password)} & UserName=${encodeURIComponent(UserName)}`
+
+    })
+    .then(response => response.text())
+    .then(Result => {
+
+        if(Result == Password){
+
+            ShowTerms()
+            sessionStorage.setItem('Session', "Trusted");
+
+        }else{
+
+            alert(1)
+
+        }
+
+    })
+
+
+    }
+
+}
+
+function ShowTerms(){
+
+    const LoginWithPassword = document.querySelector('.LoginWithPassword');
+    const LoginWithMail = document.querySelector('.LoginWithMail');
+    const TermsAndConditionsAboutLogin = document.querySelector('.TermsAndConditionsAboutLogin');
+    LoginWithPassword.style.display = "none";
+    LoginWithMail.style.display = "none";
+    TermsAndConditionsAboutLogin.style.display = "flex";
+    
 }

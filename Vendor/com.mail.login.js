@@ -207,6 +207,14 @@ function CheckCurrentMailStatus(){
                 ProcessDescripter.classList.add("ChangeTextState");
                 ProcessDescripter.innerHTML = `Espera un momento, esto tomará unos segundos...`;
 
+
+
+                setTimeout(() => {
+                    
+                    ShowTerms()
+
+                }, 2000);
+
             }
 
         })

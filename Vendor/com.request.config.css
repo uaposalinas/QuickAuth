@@ -56,6 +56,26 @@
 
 }
 
+
+.TermsAndConditionsAboutLogin{
+
+    width:80%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    background-color: #0e0e0e;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    right: 0px;
+    animation:fadeInRight 0.5s
+
+}
+
+
 .loader {
     display: flex;
   }
@@ -801,6 +821,22 @@ img{
 
 }
 
+.ProfilePhotoPreloader{
+
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:all 600ms;
+
+
+}
+
 
 
 
@@ -817,6 +853,7 @@ img{
     box-shadow: 15px 5px 5px rgba(0, 0, 0, 0.644);
     animation: Preload 3s ease;
     transition:all 900ms;
+    position: relative;
 
 }
 
@@ -828,6 +865,7 @@ img{
     background-position:center;
     background-size:cover;
     border-radius:50%;
+    z-index:3;
 
 }
 
@@ -853,6 +891,17 @@ img{
 
 }
 
+.TermsIcon{
+
+    width:90px;
+    height:90px;
+    background-image:url(https://helloid.devlabsco.space/assets/images/logo.png);
+    background-position:center;
+    background-size:cover;
+    border-radius:10px;
+
+}
+
 .AccountName{
 
     font-family:caviarDreamsBold;
@@ -863,13 +912,20 @@ img{
 
 }
 
-.CurrentProcess, .ShowMailProcess{
+.CurrentProcess, .ShowMailProcess, .TermsTitle{
 
     font-family:caviarDreamsBold;
     font-size:20px;
     margin-top:15px;
    color:#FFFFFF;
 
+
+}
+
+.TermsTitle{
+    
+    font-size:16px !important;
+    margin-top:40px;
 
 }
 
@@ -964,3 +1020,68 @@ img{
 
 }
 
+
+
+
+
+.Text{
+
+    width:75%;
+    height:auto;
+    margin-top:15px;
+    color:#9b9b9b;
+
+}
+
+.Text p, a{
+
+    font-size:15px;
+    text-align:left;    
+
+}
+
+.Text a{
+    
+    background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    font-family:caviarDreamsBold;
+
+}
+
+.Buttons{
+
+    width:100%;
+    height:50px;
+    position:absolute;
+    bottom:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+.Buttons button{
+
+    width:auto;
+    height:40px;
+    background-color:transparent;
+    color:#7668AF;
+    font-size:14px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    outline: none;
+    border:1px solid #7668AF;
+    border-radius:20px;
+    margin:5px;
+    font-family:caviarDreamsBold;
+
+}
