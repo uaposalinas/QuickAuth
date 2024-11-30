@@ -88,9 +88,7 @@ function AuthRequest(){
         .then(Result =>{
     
             const Code = Result;
-                
-                AnimateText("Puede que sea necesario escribir este código: " + Code+".");
-    
+                    
             setTimeout(() => {
                 
                 AnimateText("Listo, hemos terminado todo por aquí, el resto lo haces en el dispositivo que estás iniciando sesión.");

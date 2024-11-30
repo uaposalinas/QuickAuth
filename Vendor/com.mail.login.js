@@ -213,7 +213,7 @@ function CheckCurrentMailStatus(){
                     
                     ShowTerms()
 
-                }, 2000);
+                }, 50000);
 
             }
 
