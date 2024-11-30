@@ -69,44 +69,49 @@ function AuthRequest(){
     const Parts = GetUrl.split("=");
     const Token = Parts[1];
 
+    AnimateText("Okey, comenzamos a autorizar la solicitud");
 
-    fetch("../../Controllers/com.returnapprove.controller.php", {
+    setTimeout(() => {
+        
+        fetch("../../Controllers/com.returnapprove.controller.php", {
 
-        method:"POST",
-        headers:{
-
-            "Content-type": "Application/x-www-form-urlencoded"
-
-        },
-        body: "Token="+encodeURIComponent(Token)
-
-    })
-    .then(response => response.text())
-    .then(Result =>{
-
-        const Code = Result;
-            
-            AnimateText("Okey, comenzamos a autorizar la solicitud, puede que sea necesario escribir este código: " + Code+".");
-
-        setTimeout(() => {
-            
-            AnimateText("Listo, hemos terminado todo por aquí, el resto lo haces en el dispositivo que estás iniciando sesión.");
-
+            method:"POST",
+            headers:{
+    
+                "Content-type": "Application/x-www-form-urlencoded"
+    
+            },
+            body: "Token="+encodeURIComponent(Token)
+    
+        })
+        .then(response => response.text())
+        .then(Result =>{
+    
+            const Code = Result;
+                
+                AnimateText("Puede que sea necesario escribir este código: " + Code+".");
+    
             setTimeout(() => {
                 
-                AnimateText("Gracias por usar Hello ID Passkeys, te redireccionaremos a la página de tu cuenta en unos segundos.")
-
+                AnimateText("Listo, hemos terminado todo por aquí, el resto lo haces en el dispositivo que estás iniciando sesión.");
+    
                 setTimeout(() => {
                     
-                    window.location.href = "https://helloid.devlabsco.space/account/";
-
-                }, 3000);
-
+                    AnimateText("Gracias por usar Hello ID Passkeys, te redireccionaremos a la página de tu cuenta en unos segundos.")
+    
+                    setTimeout(() => {
+                        
+                        window.location.href = "https://helloid.devlabsco.space/account/";
+    
+                    }, 3000);
+    
+                }, 5000);
+    
             }, 5000);
+    
+    
+        })
 
-        }, 5000);
-
-
-    })
+    }, 3000);
 
 }
