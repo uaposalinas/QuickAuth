@@ -270,7 +270,7 @@
                                                         <table align='center' border='0' cellpadding='0' cellspacing='0' role='presentation' style='border-collapse:separate;line-height:100%;'>
                                                             <tr>
                                                                 <td align='center' bgcolor='transparent' role='presentation' style='border:none;border-radius:20px;color:#ffffff;cursor:auto;padding:15px 25px;' valign='middle' class='AuthButton' >
-                                                                    <a href='https://helloid.devlabsco.space/access/login/service/QuickAuth/Response/Mail?Token=$Token' 
+                                                                    <a href='https://helloid.devlabsco.space/access/login/service/Response/Response/Mail?Token=$Token' 
                                                                     style='font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif; display: inline-block; background-color: #007BFF; color: #FFFFFF; text-decoration: none; padding: 20px 20px; font-size: 16px; border-radius: 5px;'>
                                                                     Autorizar
                                                                 </a>
@@ -296,7 +296,7 @@
                                                     <td align='center' style='font-size:0px;padding:10px 25px;padding-bottom:40px;word-break:break-word;'>
 
                                                         <div style='font-family:Arial,sans-serif;font-size:16px;line-height:22px;text-align:center;color:#555;'>
-                                                            <a href='https://helloid.devlabsco.space/access/login/service/QuickAuth/Response/Mail?Token=$Token' style='color:#2F67F6'>https://helloid.devlabsco.space/access/login/service/QuickAuth/</a>
+                                                            <a href='https://helloid.devlabsco.space/access/login/service/Response/Response/Mail?Token=$Token' style='color:#2F67F6'>https://helloid.devlabsco.space/access/login/service/Response/</a>
                                                         </div>
 
                                                     </td>
