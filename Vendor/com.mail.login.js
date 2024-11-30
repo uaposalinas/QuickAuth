@@ -203,7 +203,7 @@ function CheckCurrentMailStatus(){
 
                 StepIdentiferVariable.style.backgroundImage = "url(../Assets/Login.gif)";
                 ShowMailProcess.classList.add('ChangeTextState');
-                ShowMailProcess.innerHTML = "Listo, iniciaste sesión";
+                ShowMailProcess.innerHTML = "Estamos iniciando sesión";
                 ProcessDescripter.classList.add("ChangeTextState");
                 ProcessDescripter.innerHTML = `Espera un momento, esto tomará unos segundos...`;
 
@@ -213,7 +213,7 @@ function CheckCurrentMailStatus(){
                     
                     ShowTerms()
 
-                }, 50000);
+                }, 5000);
 
             }
 
