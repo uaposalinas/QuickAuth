@@ -1085,3 +1085,89 @@ img{
     font-family:caviarDreamsBold;
 
 }
+
+.NotificationsRenderParent{
+
+    width:1000px;
+    height:100px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+.NotificationsRender{
+
+    width:auto;
+    height:50px;
+    background-color:#202124;
+    padding-left:20px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    border-radius:10px;
+    box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.644);
+    animation:fadeInUp 0.5s;
+    position:absolute;
+    left:50px
+
+}
+
+.NotificationsRender p{
+
+    font-family:caviarDreamsBold;
+    font-size:15px;
+    color:#FFFFFF;
+    text-align:left;
+    margin-right:15px;
+
+}
+
+.NotificationsRender .CloseButton{
+
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    transition:all 300ms;
+
+}
+
+.NotificationsRender i{
+
+    color:#cacacb;
+    border-radius:50%;
+    width: 100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+}
+
+.NotificationsRender .CloseButton:hover{
+
+    background-color: #4d4d50;
+
+
+}
+
+.ShowNotification{
+
+    display:flex;
+
+}
+
+.CloseNotification{
+
+    animation:fadeOutDown 0.5s;
+
+}

@@ -56,9 +56,7 @@ function InitLoginService(){
         .then(Information =>{
 
             sessionStorage.setItem("CurrentSessionObject", JSON.stringify(Information))
-            
-//            <link rel="preload" href="ruta/a/tu-imagen.jpg" as="image">
-
+        
             const CreatePreload = document.createElement('link');
             CreatePreload.rel = "preload";
             CreatePreload.href = Information.UserInfo.ProfilePhoto;
@@ -98,6 +96,9 @@ function InitLoginService(){
         })
         .catch(Err => {
 
+            StopPreloader();
+            CreateNotification("001", "No pudimos encontrar la cuenta especificada, inténtalo nuevamente.", "Normal")
+            GetUserNameForLogin.value = "";
             console.error('Ocurrió un error al procesar esta solicitud. ErrDescripter{'+Err+"}")
 
         })
@@ -242,7 +243,7 @@ function ConfirmPassword(){
 
     if(Password.trim() === ""){
 
-        alert('Vacio')
+        CreateNotification("002", "Debes escribir la contraseña para iniciar sesión.", "Normal");
 
     }else{
 
@@ -268,7 +269,7 @@ function ConfirmPassword(){
 
         }else{
 
-            alert(1)
+            CreateNotification("003", "La contraseña especificada no es correcta.", "Normal");
 
         }
 
