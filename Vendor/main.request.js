@@ -4,8 +4,11 @@ App.addEventListener('load', InitApp);
 
 function InitApp(e){
 
+    const Url = App.location.href;
+    const GetArguments = Url.split("?");
+    const ServiceMap = GetArguments[1];
 
-
+    SetLoginService(ServiceMap.substr(13, ServiceMap.length -1))
 
 }
 
@@ -63,5 +66,58 @@ function CreateNotification(ID, Data, Priority){
         }, 300);
 
     }
+
+}
+
+
+function SetLoginService(ServiceKey){
+
+    const Key = ServiceKey;
+
+    fetch('../Controllers/com.detect.servicemap.php', {
+
+        method:"POST",
+        headers:{
+
+            "Content-Type": "Application/x-www-form-urlencoded",
+
+        },
+        body: `Token=${encodeURIComponent(Key)}`,
+
+    })
+    .then(response => response.json())
+    .then(QueryResults => {
+
+        if(QueryResults.access == "true"){
+
+            const GlobalPreloader = document.querySelector('.GlobalPreloader');
+            const GetUserNameInfo = document.querySelector('.GetUserNameInfo');
+    
+            GlobalPreloader.style.opacity = "0";
+            GetUserNameInfo.style.opacity = "1";
+    
+            const Object = QueryResults;
+            const ServiceIdentifer = document.querySelector('.ServiceIdentifer');
+            
+            const ServiceName = document.querySelector('.ServiceName');
+    
+            const Name = Object.ServiceInfo.ServiceName;
+            const Logo = Object.ServiceInfo.ServiceLogo;
+    
+            ServiceName.innerHTML = Name;
+            ServiceIdentifer.style.backgroundImage = `url(${Logo})`;
+
+        }else if(QueryResults.access == "false"){
+
+            App.location.href = "https://helloid.devlabsco.space";
+
+        }
+        
+    })
+    .catch(redirect => {
+
+        App.location.href = "https://helloid.devlabsco.space";
+
+    })
 
 }
