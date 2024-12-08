@@ -219,8 +219,8 @@ img{
 
 .LogPage{
 
-    width:80%;
-    height:80%;
+    width:1095px;
+    height:520px;
      background: rgba( 28, 28, 28, 0.4 );
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
@@ -229,6 +229,7 @@ img{
     position:absolute;
     border-radius:20px;
     display:none;
+    animation: fadeInRight 0.5s;
 
 }
 
@@ -433,7 +434,7 @@ img{
 
     }
 
-    .Instructions, .Instructions2{
+    .Instructions, .Instructions2, .Instructions3{
 
         visibility: hidden;
 
@@ -483,6 +484,25 @@ img{
 
 
 }
+
+.Instructions3{
+
+    width:60%;
+    height:100px;
+    display: flex;
+    justify-content:left;
+    text-align:left;
+    height:10px;
+    font-size:15px;
+    position:absolute;
+    top:350px;
+    left:35px;
+    color:#cccaca;
+    flex-wrap: wrap;
+
+
+}
+
 
 .Instructions i, .Instructions2 i{
 
@@ -651,6 +671,7 @@ img{
     align-items:center;
     text-align:center;
     border:1px solid rgba(255, 255, 255, 0.04);
+    animation: fadeIn 0.5s;
 
 }
 
@@ -801,6 +822,19 @@ img{
     position: absolute;
     bottom:20px;
     left:30px;
+
+}
+
+.ChangeAccount{
+
+    font-size:13px;
+    font-family:caviarDreamsBold;
+    color:#c39f5c;
+    cursor: pointer;
+    position: absolute;
+    bottom:20px;
+    left:30px;
+    display: none;
 
 }
 
@@ -1287,4 +1321,33 @@ img{
      opacity: 0.8;
     }
    }
-   
+
+.ShowGetInfoPage{
+
+    animation: fadeInLeft 0.5s;
+
+}
+
+.RemoveGetInfoPage{
+
+    animation: fadeOutLeft 0.5s;
+
+}
+
+.ShowCodePage{
+
+    animation: fadeInRight 0.5s;
+
+}
+
+.RemoveCodePage{
+
+    animation: fadeOutRight 0.5s;
+
+}
+
+.ReturnGetInfo{
+
+    animation: fadeInLeft 0.5s;
+
+}

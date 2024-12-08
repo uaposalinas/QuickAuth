@@ -1,6 +1,5 @@
 
 
-const QrContainer = document.querySelector('.QR');
 
 const SendCode = document.querySelector('.SendCode');
 

@@ -432,20 +432,7 @@
             ";
         
             $MailService->send();
-            require '../com.config/com.config.php';
 
-            $SaveLogin = "INSERT INTO `Requests`(`PassKeyID`, `Account`, `Code`, `Status`, `Method`) VALUES ('$Token','$ThisUserName','$Code','Sent','Mail')";
-            $DoSave = $Connection -> query($SaveLogin);
-        
-            if($DoSave){
-        
-                echo "true";
-        
-            }else{
-        
-                echo "false";
-        
-            }
         } catch (Exception $e) {
             echo "false";
         }

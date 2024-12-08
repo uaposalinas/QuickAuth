@@ -6,6 +6,7 @@ const Preloader = document.querySelector('.Preloader');
 const Letter = document.querySelector('.Letter');
 const Title = document.querySelector('.Title');
 const CreateAccount = document.querySelector('.CreateAccount');
+const ChangeAccount = document.querySelector('.ChangeAccount');
 const GetUserNameContainer = document.querySelector('.GetUserNameContainer');
 const SelectLoginMethod = document.querySelector('.SelectLoginMethod');
 const UserProfilePhoto = document.querySelector('.UserProfilePhoto');
@@ -78,7 +79,8 @@ function InitLoginService(){
                 Letter.style.display = "none";
                 GetUserNameContainer.style.display = "none";
                 SelectLoginMethod.style.opacity = "1";
-                CreateAccount.innerHTML = "Cambiar de cuenta";
+                CreateAccount.style.display = "none";
+                ChangeAccount.style.display = "flex";
                 Title.classList.add('ChangeTextState');
                 Title.innerHTML = "Selecciona una <br> opcion para iniciar sesión";
 
@@ -200,7 +202,7 @@ for(let Aument = 0; Aument < Limit; Aument++){
 
         }else if(Position == 2){
 
-            alert('Login width Passkeys')
+            InitCodeLogService();
 
         }
 

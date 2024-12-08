@@ -4,6 +4,7 @@ App.addEventListener('load', InitApp);
 
 function InitApp(e){
 
+
     const Url = App.location.href;
     const GetArguments = Url.split("?");
     const ServiceMap = GetArguments[1];
@@ -92,9 +93,12 @@ function SetLoginService(ServiceKey){
 
             const GlobalPreloader = document.querySelector('.GlobalPreloader');
             const GetUserNameInfo = document.querySelector('.GetUserNameInfo');
+            const SensePath = document.querySelector('.SensePath');
     
             GlobalPreloader.style.opacity = "0";
             GetUserNameInfo.style.opacity = "1";
+
+            GetUserNameForLogin.focus()
     
             const Object = QueryResults;
             const ServiceIdentifer = document.querySelector('.ServiceIdentifer');
@@ -105,6 +109,7 @@ function SetLoginService(ServiceKey){
             const Logo = Object.ServiceInfo.ServiceLogo;
     
             ServiceName.innerHTML = Name;
+            SensePath.innerHTML = `Iniciar Sesión <ion-icon name="chevron-forward-outline"></ion-icon> ${Name}`
             ServiceIdentifer.style.backgroundImage = `url(${Logo})`;
 
         }else if(QueryResults.access == "false"){
@@ -119,5 +124,67 @@ function SetLoginService(ServiceKey){
         App.location.href = "https://helloid.devlabsco.space";
 
     })
+
+}
+
+
+App.addEventListener('load', RefreshFiles)
+
+function RefreshFiles(){
+
+    const GetStyles = document.getElementsByTagName('link');
+    const GetScripts = document.getElementsByTagName('script');
+
+    for(let Aument = 0; Aument < GetStyles.length; Aument++){
+
+        const Style = GetStyles[Aument];
+        
+        if(Style.rel == "stylesheet"){
+
+            Style.href = `${Style.href}?v=${Math.random()}`;
+            Style.setAttribute("refresh-status", "Updated");
+            Style.setAttribute("controller", "devlabs-autoloadapi.flx");
+            Style.setAttribute("autoload", "done")
+
+        }
+
+    }
+
+
+
+}
+
+
+
+document.querySelector('.CreateAccount').addEventListener('click', CreateNewAccount);
+
+function CreateNewAccount(){
+
+    window.location.href = "https://helloid.devlabsco.space/access/signin/service/request/";
+
+}
+
+document.querySelector('.ChangeAccount').addEventListener('click', ChangeTheAccount);
+
+function ChangeTheAccount(){
+
+    Letter.style.display = "flex";
+    GetUserNameContainer.style.display = "flex";
+    GetUserNameContainer.classList.add('ReturnGetInfo');
+    SelectLoginMethod.style.display = "none";
+    CreateAccount.classList.add("ChangeAccount");
+    CreateAccount.classList.remove("CreateAccount");
+    CreateAccount.innerHTML = "Cambiar de cuenta";
+    Title.classList.add('ChangeTextState');
+    Title.innerHTML = "Escribe tu @ <br> e inicia sesión";
+    GetUserNameForLogin.value = "";
+
+    setTimeout(() => {
+        
+        Title.classList.remove('ChangeTextState');
+        GetUserNameContainer.classList.remove('ReturnGetInfo');
+        GetUserNameForLogin.focus()
+
+    }, 500);
 
 }
