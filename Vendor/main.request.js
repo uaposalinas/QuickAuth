@@ -131,7 +131,7 @@ function SetLoginService(ServiceKey){
     .catch(redirect => {
 
         alert('')
-        App.location.href = "https://google.com";
+       // App.location.href = "https://google.com";
 
     })
 
