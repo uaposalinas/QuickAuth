@@ -94,7 +94,6 @@ function SetLoginService(ServiceKey){
             const GlobalPreloader = document.querySelector('.GlobalPreloader');
             const GetUserNameInfo = document.querySelector('.GetUserNameInfo');
             const SensePath = document.querySelector('.SensePath');
-            const DiscInfo = document.querySelector('.DiscInfo');
     
             GlobalPreloader.style.opacity = "0";
             GetUserNameInfo.style.opacity = "1";
@@ -114,6 +113,7 @@ function SetLoginService(ServiceKey){
 
             localStorage.setItem('ServiceTarget', Target);
             localStorage.setItem('PostRedirectPath', Post);
+            localStorage.setItem('ServiceName', Name);
     
             ServiceName.innerHTML = Name;
             SensePath.innerHTML = `Iniciar Sesión <ion-icon name="chevron-forward-outline"></ion-icon> ${Name}`
