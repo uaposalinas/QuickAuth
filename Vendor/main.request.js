@@ -122,7 +122,7 @@ function SetLoginService(ServiceKey){
 
         }else if(QueryResults.access == "false"){
 
-            App.location.href = "https://youtube.com";
+            App.location.href = "https://helloid.devlabsco.space";
 
         }
         
@@ -198,8 +198,12 @@ function ChangeTheAccount(){
 }
 
 
+const DisclamerInfo = document.querySelector('.DisclamerInfo');
+DisclamerInfo.innerHTML = `Si continúas, Hello ID compartirá tu nombre, tu dirección de correo electrónico, tu preferencia de idioma y tu imagen de perfil con Eonix. Consulta la <a href="/politica-privacidad" target="_blank">Política de Privacidad</a> y los <a href="/terminos-condiciones" target="_blank">Términos del Servicio</a> de este servicio.`
+
 const Approve = document.querySelector('.Approve');
 const NoApprove = document.querySelector('.NoApprove');
 
 NoApprove.addEventListener('click', e=>{ App.location.reload() });
 Approve.addEventListener('click', e=>{ Preloader.style.display = "flex"; setTimeout(() => { App.location.href = localStorage.getItem('PostRedirectPath') }, 2500); })
+
