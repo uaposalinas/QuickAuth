@@ -94,6 +94,7 @@ function SetLoginService(ServiceKey){
             const GlobalPreloader = document.querySelector('.GlobalPreloader');
             const GetUserNameInfo = document.querySelector('.GetUserNameInfo');
             const SensePath = document.querySelector('.SensePath');
+            const DiscInfo = document.querySelector('.DiscInfo');
     
             GlobalPreloader.style.opacity = "0";
             GetUserNameInfo.style.opacity = "1";
@@ -102,6 +103,7 @@ function SetLoginService(ServiceKey){
     
             const Object = QueryResults;
             const ServiceIdentifer = document.querySelector('.ServiceIdentifer');
+            const TermsTitle = document.querySelector('.TermsTitle');
             
             const ServiceName = document.querySelector('.ServiceName');
     
@@ -116,6 +118,8 @@ function SetLoginService(ServiceKey){
             ServiceName.innerHTML = Name;
             SensePath.innerHTML = `Iniciar Sesión <ion-icon name="chevron-forward-outline"></ion-icon> ${Name}`
             ServiceIdentifer.style.backgroundImage = `url(${Logo})`;
+            TermsTitle.innerHTML = `¿Hello ID puede compartir datos con ${Name}?`;
+            DiscInfo.innerHTML = `  Si continúas, Hello ID compartirá tu nombre, tu dirección de correo electrónico, tu preferencia de idioma y tu imagen de perfil con ${Name}. Consulta la <a href="/politica-privacidad" target="_blank">Política de Privacidad</a> y los <a href="/terminos-condiciones" target="_blank">Términos del Servicio</a> de este servicio.</p>`
 
         }else if(QueryResults.access == "false"){
 
