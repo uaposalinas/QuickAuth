@@ -119,7 +119,7 @@ function SetLoginService(ServiceKey){
             SensePath.innerHTML = `Iniciar Sesión <ion-icon name="chevron-forward-outline"></ion-icon> ${Name}`
             ServiceIdentifer.style.backgroundImage = `url(${Logo})`;
             TermsTitle.innerHTML = `¿Hello ID puede compartir datos con ${Name}?`;
-            DiscInfo.innerHTML = `  Si continúas, Hello ID compartirá tu nombre, tu dirección de correo electrónico, tu preferencia de idioma y tu imagen de perfil con Holis. Consulta la <a href="/politica-privacidad" target="_blank">Política de Privacidad</a> y los <a href="/terminos-condiciones" target="_blank">Términos del Servicio</a> de este servicio.</p>`
+            DiscInfo.innerHTML = ``
 
         }else if(QueryResults.access == "false"){
 
