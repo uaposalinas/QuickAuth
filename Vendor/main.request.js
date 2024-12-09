@@ -199,7 +199,7 @@ function ChangeTheAccount(){
 
 
 const DisclamerInfo = document.querySelector('.DisclamerInfo');
-DisclamerInfo.innerHTML = `Si continúas, Hello ID compartirá tu nombre, tu dirección de correo electrónico, tu preferencia de idioma y tu imagen de perfil con Eonix. Consulta la <a href="/politica-privacidad" target="_blank">Política de Privacidad</a> y los <a href="/terminos-condiciones" target="_blank">Términos del Servicio</a> de este servicio.`
+DisclamerInfo.innerHTML = `Si continúas, Hello ID compartirá tu nombre, tu dirección de correo electrónico, tu preferencia de idioma y tu imagen de perfil con ${localStorage.getItem('ServiceName')}. Consulta la <a href="/politica-privacidad" target="_blank">Política de Privacidad</a> y los <a href="/terminos-condiciones" target="_blank">Términos del Servicio</a> de este servicio.`
 
 const Approve = document.querySelector('.Approve');
 const NoApprove = document.querySelector('.NoApprove');
