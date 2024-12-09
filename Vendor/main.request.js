@@ -107,6 +107,11 @@ function SetLoginService(ServiceKey){
     
             const Name = Object.ServiceInfo.ServiceName;
             const Logo = Object.ServiceInfo.ServiceLogo;
+            const Target = Object.ServiceInfo.TargetUrl;
+            const Post = Object.ServiceInfo.PostRedirect;
+
+            localStorage.setItem('ServiceTarget', Target);
+            localStorage.setItem('PostRedirectPath', Post);
     
             ServiceName.innerHTML = Name;
             SensePath.innerHTML = `Iniciar Sesión <ion-icon name="chevron-forward-outline"></ion-icon> ${Name}`
@@ -188,3 +193,10 @@ function ChangeTheAccount(){
     }, 500);
 
 }
+
+
+const Approve = document.querySelector('.Approve');
+const NoApprove = document.querySelector('.NoApprove');
+
+NoApprove.addEventListener('click', e=>{ App.location.reload() });
+Approve.addEventListener('click', e=>{ Preloader.style.display = "flex"; setTimeout(() => { App.location.href = localStorage.getItem('PostRedirectPath') }, 2500); })

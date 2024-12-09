@@ -48,17 +48,29 @@ function InitApprove(){
         body: "Token="+encodeURIComponent(Token)
 
     })
-    .then(response => response.text())
+    .then(response => response.json())
     .then(Result =>{
 
-        const UserName = Result;
+        const Object = Result;
 
-        setTimeout(() => {
-            
-            AnimateText("Al parecer estás intentando iniciar sesión en"+Result+" si tu hiciste esta solicitud recientemente puedes aprobarla usando el botón de abajo.");
+        if(Object.access == true && Object.Info.Status == "Sent" || Object.Info.Status == "Pending"){
 
-        }, 2000);
+            const UserName = Object.Info.User;
 
+            setTimeout(() => {
+                
+                AnimateText("Al parecer estás intentando iniciar sesión en"+UserName+" si tu hiciste esta solicitud recientemente puedes aprobarla usando el botón de abajo.");
+    
+            }, 2000);
+    
+
+        }else if(Object.Info.Status == "Completed"){
+
+            App.location.href = "../TimedOut";
+
+        }
+
+      
     })
 
 }

@@ -30,8 +30,6 @@ function CreateToken(l){
 
 function InitMailLogService(){
 
-    sessionStorage.removeItem('Toke');
-
     sessionStorage.setItem('Token', CreateToken(60));
     sessionStorage.setItem('Code', CreateToken(6));
 

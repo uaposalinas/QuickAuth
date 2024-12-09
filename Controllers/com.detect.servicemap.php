@@ -17,6 +17,7 @@
             $Logo = $Row["ServiceLogo"];
             $Developer = $Row["Developer"];
             $Target = $Row["TargetURL"];
+            $Redirect = $Row["PostRedirect"]; 
 
             $Return = [
 
@@ -28,6 +29,7 @@
                 "TargetUrl" => $Target,
                 "Developer" => $Developer,
                 "ServiceLogo" => $Logo,
+                "PostRedirect" => $Redirect,
 
 
               ]

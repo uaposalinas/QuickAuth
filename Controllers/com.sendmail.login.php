@@ -7,6 +7,8 @@
     require '../Vendor/Mail/PHPMailer.php';
     require '../Vendor/Mail/SMTP.php';
     require '../Vendor/Mail/Exception.php';
+    require '../com.config/com.config.php';
+
 
     $MailService = new PHPMailer(true);
     $MailService->CharSet = 'UTF-8';
@@ -18,7 +20,9 @@
         $Mail = $_POST["Mail"];
         $Token = $_POST["Token"];
         $Code = $_POST["Code"];
-
+    
+        $SaveLogin = "INSERT INTO `Requests`(`PassKeyID`, `Account`, `Code`, `Status`, `Method`) VALUES ('$Token','$ThisUserName','$Code','Sent','Mail')";
+        $DoSave = $Connection -> query($SaveLogin);
 
         try {
 
@@ -432,6 +436,8 @@
             ";
         
             $MailService->send();
+
+            echo "true";
 
         } catch (Exception $e) {
             echo "false";

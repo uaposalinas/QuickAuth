@@ -8,22 +8,38 @@
 
         $Token = $_POST["Token"];
 
-        $DoUpdate = "UPDATE Requests SET Status = 'Pending' WHERE PasskeyID = '$Token'";
-        $UpdateResults = $Connection -> query($DoUpdate);
-
-        $UserName = "SELECT Account FROM Requests WHERE PasskeyID = '$Token'";
+        $UserName = "SELECT Account, Status FROM Requests WHERE PasskeyID = '$Token'";
         $DoQuery = $Connection -> query($UserName);
 
         if($DoQuery -> num_rows > 0){
 
             $Row = $DoQuery -> fetch_assoc();
             $User = $Row["Account"];
+            $Status = $Row["Status"];
 
-            echo "@$User";
+            $Return = [
+
+                "access" => "true",
+
+                "Info" => [
+
+                    "User" => "@$User",
+                    "Status" => $Status,
+
+                ]
+
+                ];
+
+                if($Status == "Sent"){
+
+                    $DoUpdate = "UPDATE Requests SET Status = 'Pending' WHERE PasskeyID = '$Token'";
+                    $UpdateResults = $Connection -> query($DoUpdate);
+
+                }
 
         }else{
 
-            echo "error";
+            $Return = ["access" => "false"];
 
         }
 
@@ -35,8 +51,13 @@
 
     }else{
 
-        echo "error";
+        $Return = ["access" => "false"];
 
     }
+
+    header("Content-Type: application/json");
+    echo json_encode($Return);
+
+    $Connection -> close();
 
 ?>
