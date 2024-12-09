@@ -119,7 +119,6 @@ function SetLoginService(ServiceKey){
             SensePath.innerHTML = `Iniciar Sesión <ion-icon name="chevron-forward-outline"></ion-icon> ${Name}`
             ServiceIdentifer.style.backgroundImage = `url(${Logo})`;
             TermsTitle.innerHTML = `¿Hello ID puede compartir datos con ${Name}?`;
-            DiscInfo.innerHTML = ``
 
         }else if(QueryResults.access == "false"){
 
