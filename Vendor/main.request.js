@@ -123,7 +123,7 @@ function SetLoginService(ServiceKey){
 
         }else if(QueryResults.access == "false"){
 
-            App.location.href = "https://google.com";
+            App.location.href = "https://youtube.com";
 
         }
         
