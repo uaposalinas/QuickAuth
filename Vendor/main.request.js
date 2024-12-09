@@ -123,14 +123,14 @@ function SetLoginService(ServiceKey){
 
         }else if(QueryResults.access == "false"){
 
-            App.location.href = "https://helloid.devlabsco.space";
+            App.location.href = "https://google.com";
 
         }
         
     })
     .catch(redirect => {
 
-        App.location.href = "https://helloid.devlabsco.space";
+        App.location.href = "https://google.com";
 
     })
 
