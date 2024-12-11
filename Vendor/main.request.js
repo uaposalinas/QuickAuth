@@ -210,5 +210,16 @@ const Approve = document.querySelector('.Approve');
 const NoApprove = document.querySelector('.NoApprove');
 
 NoApprove.addEventListener('click', e=>{ App.location.reload() });
-Approve.addEventListener('click', e=>{ Preloader.style.display = "flex"; setTimeout(() => { App.location.href = localStorage.getItem('PostRedirectPath') }, 2500); })
+Approve.addEventListener('click', e=>{ Preloader.style.display = "flex"; PrepareForSaveAccount(); const Object = JSON.parse(sessionStorage.getItem('CurrentSessionObject'));const NewAccount = {Photo: Object.UserInfo.ProfilePhoto,Name: Object.UserInfo.Name, UserName: Object.UserInfo.UserName}; AddAccount(NewAccount); setTimeout(() => { App.location.href = localStorage.getItem('PostRedirectPath') }, 2500); })
+
+
+function GetAccountInfo(){
+
+   
+
+      
+
+}
+
+  
 
