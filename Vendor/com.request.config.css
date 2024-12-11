@@ -660,7 +660,7 @@ img{
 
 }
 
-.ServiceName{
+.ServiceName, .ServiceName2{
 
     font-family:caviarDreamsBold;
     color:#FFFFFF;
@@ -1049,6 +1049,7 @@ img{
     justify-content:center;
     align-items:center;
     text-align:center;
+    z-index:999999999999999999999999999999999999;
 
 }
 
@@ -1517,5 +1518,101 @@ div.spinners {
     font-size:25px;
     color:#9b9b9b;
     display: none;
+
+}
+
+@media screen and (max-width:1095px) {
+
+    html{
+
+        overflow: hidden !important;
+
+    }
+
+    body{
+
+        width:100% !important;
+        height:100% !important;
+        background-color: #7668AF;
+        overflow:hidden !important;
+
+    }
+
+    .RequestInfo{
+
+        width:100% !important;
+        height:100% !important;
+        position:absolute !important;
+        top:0px !important;
+        border-radius:0px !important;
+        border:0px transparent !important;
+        overflow:hidden !important;
+
+
+    }
+
+    .HideInResponsiveMode{
+
+        display: none !important;
+
+    }
+
+    .ExpandInResponsive{
+
+        width:100% !important;
+        height:100%;
+
+    }
+
+    .ConfirmButton{
+
+        padding-top:20px !important;
+        padding-bottom:20px !important;
+        right: unset !important;
+
+    }
+
+    .LoginOptions{
+
+        width:90% !important;
+
+    }
+
+    .TermsAndConditionsAboutLogin{
+
+        width:100% !important;
+        right: unset !important;
+
+    }
+
+    .Resize{
+
+        width:60% !important;
+
+    }
+
+    .ServiceName2{
+
+        color:#9b9b9b !important;
+        font-size:23px;
+        margin-top:5px;
+        margin-bottom:15px;
+
+    }
+
+    .NotificationsRenderParent{
+
+        width:100%;
+        bottom:10px
+
+    }
+
+    .NotificationsRender{
+
+        width:90%;
+        left:5%;
+        height:auto;
+
+    }
 
 }

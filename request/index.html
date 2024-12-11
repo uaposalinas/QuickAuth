@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Iniciar Sesión • Hello ID</title>
     <link rel="stylesheet" href="../Fonts/IndexFontsCaviarDreams.css">
     <link rel="stylesheet" href="../Fonts/IndexFontsRoboto.css">
@@ -20,6 +20,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    
 
     <script>
 
@@ -68,7 +69,7 @@
         </div>
         <div class="GetUserNameInfo" style="opacity: 0;">
 
-            <div class="Sides">
+            <div class="Sides HideInResponsiveMode">
 
                 <i class="fi fi-br-angle-small-left BackPosition"></i>
 
@@ -91,7 +92,9 @@
                 <div class="ChangeAccount">Cambiar de cuenta</div>
 
             </div>
-            <div class="Sides" style="position:relative; overflow: hidden;">
+
+
+            <div class="Sides ExpandInResponsive" style="position:relative; overflow: hidden;">
 
                 <div class="GetUserNameContainer" style="display: none;">
 
@@ -115,6 +118,16 @@
                 <div class="AccountSelector">
 
                     <i class="fi fi-rr-multiple AddNewAccountButton"></i>
+
+                    <div class="ServiceIdentiderPhotoContainer">
+
+                        <div class="Identifer ServiceIdentifer2"></div>
+    
+                    </div>
+    
+                    <p class="ServiceLoginTitle Resize">Selecciona una cuenta para iniciar en:</p>
+                    <p class="ServiceName2">Eonix</p>
+                    
 
                     <div class="SelectorPreloader">
 
@@ -174,7 +187,7 @@
 
                        </div>
 
-                       <div class="Option">
+                       <div class="Option HideInResponsiveMode">
 
                         <i class="fi fi-ss-qr-scan" style="font-size:17px;"></i>                        
                         <p>Código QR o Passkey</p>
