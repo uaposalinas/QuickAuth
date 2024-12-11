@@ -8,6 +8,7 @@
     align-items:center;
     text-align:center;
     flex-direction:column;
+    animation:fadeIn 0.5s;
 
 }
 
@@ -1463,6 +1464,14 @@ img{
     align-items:center;
     text-align:center;
     flex-direction:column;
+    background-color: transparent !important;
+
+}
+
+.TimeLogin:hover{
+
+    background-color: transparent !important;
+    border:none !important;
 
 }
 
@@ -1492,6 +1501,7 @@ img{
     position: absolute !important;
     top:calc(100% - 45px) !important;
     height:45px !important;
+    display: none !important;
 
 }
 
@@ -1583,3 +1593,26 @@ div.spinners {
     -webkit-animation-delay: -0.0833s;
   }
   
+
+.AddNewAccountButton{
+
+    position:absolute;
+    top:15px;
+    right:15px;
+    cursor: pointer;
+    font-size:25px;
+    color:#9b9b9b;
+
+}
+
+.ReturnExistAccounts{
+
+    position:absolute;
+    top:15px;
+    right:15px;
+    cursor: pointer;
+    font-size:25px;
+    color:#9b9b9b;
+    display: none;
+
+}

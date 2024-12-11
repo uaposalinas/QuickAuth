@@ -1,12 +1,13 @@
 const DeviceSessions = localStorage.getItem('DeviceSessions');
 const AccTi = document.querySelector('.AccTi');
-//const GetUserNameContainer = document.querySelector('.GetUserNameContainer');
+const ReturnExistAccounts = document.querySelector('.ReturnExistAccounts');
 const AccountSelector = document.querySelector('.AccountSelector');
 
 if(DeviceSessions){
 
     AccTi.innerHTML = "Selecciona una <br> cuenta e inicia sesión";
     document.querySelector('.GetUserNameContainer').style.display = "none";
+    ReturnExistAccounts.style.display = "flex";
     AccountSelector.style.display = "flex";
     DisplayAccounts();
     SelectAccount()
@@ -158,5 +159,51 @@ function CreateDeliveryOrder() {
 
   })
 
+
+}
+
+
+const AddNewAccountButton = document.querySelector('.AddNewAccountButton');
+
+AddNewAccountButton.addEventListener('click', AddNewAccount);
+
+function AddNewAccount(){
+
+  AccountSelector.style.animation = "fadeOutDown 0.5s";
+  setTimeout(() => {
+    
+    AccountSelector.style.display = "none";
+    AccountSelector.style.animation = "none";
+
+    setTimeout(() => {
+      
+      document.querySelector('.GetUserNameContainer').style.display = "flex";
+
+    }, 100);
+
+  }, 300);
+
+}
+
+
+ReturnExistAccounts.addEventListener('click', ReturnToAccounts);
+
+function ReturnToAccounts(){
+
+
+  document.querySelector('.GetUserNameContainer').style.animation = "fadeOutDown 0.5s";
+
+  setTimeout(() => {
+    
+    document.querySelector('.GetUserNameContainer').style.display = "none";
+    document.querySelector('.GetUserNameContainer').style.animation = "none";
+
+    setTimeout(() => {
+      
+        AccountSelector.style.display = "flex";
+
+    }, 100);
+
+  }, 300);
 
 }
