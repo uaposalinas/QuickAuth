@@ -102,9 +102,11 @@ function SetLoginService(ServiceKey){
     
             const Object = QueryResults;
             const ServiceIdentifer = document.querySelector('.ServiceIdentifer');
+            const ServiceIdentifer2 = document.querySelector('.ServiceIdentifer2');
             const TermsTitle = document.querySelector('.TermsTitle');
             
             const ServiceName = document.querySelector('.ServiceName');
+            const ServiceName2 = document.querySelector('.ServiceName2')
     
             const Name = Object.ServiceInfo.ServiceName;
             const Logo = Object.ServiceInfo.ServiceLogo;
@@ -116,9 +118,13 @@ function SetLoginService(ServiceKey){
             localStorage.setItem('ServiceName', Name);
     
             ServiceName.innerHTML = Name;
+            ServiceName2.innerHTML = Name;
+            
             SensePath.innerHTML = `Iniciar Sesión <ion-icon name="chevron-forward-outline"></ion-icon> ${Name}`
             ServiceIdentifer.style.backgroundImage = `url(${Logo})`;
+            ServiceIdentifer2.style.backgroundImage = `url(${Logo})`;
             TermsTitle.innerHTML = `¿Hello ID puede compartir datos con ${Name}?`;
+            
             TypeDisclamer()
 
         }else if(QueryResults.access == "false"){
@@ -187,6 +193,7 @@ function ChangeTheAccount(){
     Title.classList.add('ChangeTextState');
     Title.innerHTML = "Escribe tu @ <br> e inicia sesión";
     GetUserNameForLogin.value = "";
+    document.querySelector('.BackPosition2').style.display = "none"
 
     setTimeout(() => {
         
@@ -210,16 +217,14 @@ const Approve = document.querySelector('.Approve');
 const NoApprove = document.querySelector('.NoApprove');
 
 NoApprove.addEventListener('click', e=>{ App.location.reload() });
-Approve.addEventListener('click', e=>{ Preloader.style.display = "flex"; PrepareForSaveAccount(); const Object = JSON.parse(sessionStorage.getItem('CurrentSessionObject'));const NewAccount = {Photo: Object.UserInfo.ProfilePhoto,Name: Object.UserInfo.Name, UserName: Object.UserInfo.UserName}; AddAccount(NewAccount); setTimeout(() => { App.location.href = localStorage.getItem('PostRedirectPath') }, 2500); })
+Approve.addEventListener('click', e=>{ Preloader.style.display = "flex"; PrepareForSaveAccount(); const Object = JSON.parse(sessionStorage.getItem('CurrentSessionObject'));const NewAccount = {Photo: Object.UserInfo.ProfilePhoto,Name: Object.UserInfo.Name, UserName: Object.UserInfo.UserName}; AddAccount(NewAccount); CreateDeliveryOrder() /*setTimeout(() => { App.location.href = localStorage.getItem('PostRedirectPath') }, 2500); */})
 
 
-function GetAccountInfo(){
-
-   
-
-      
-
-}
 
   
+
+
+
+
+
 

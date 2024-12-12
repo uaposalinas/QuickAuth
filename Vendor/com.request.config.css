@@ -666,7 +666,7 @@ img{
     color:#FFFFFF;
     font-size:20px;
     cursor: pointer;
-    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+    background-image: url(../Assets/59P2od.gif);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -743,18 +743,6 @@ img{
 
 }
 
-.ChangeAccount{
-
-    font-size:13px;
-    font-family:caviarDreamsBold;
-    color:#c39f5c;
-    cursor: pointer;
-    position: absolute;
-    bottom:20px;
-    left:30px;
-    display: none;
-
-}
 
 .Preloader{
 
@@ -958,7 +946,7 @@ img{
 }
 
 
-.BackPosition{
+.BackPosition, .BackPosition2{
 
     width:30px;
     height:30px;
@@ -969,6 +957,7 @@ img{
     cursor: pointer;
     font-size:25px;
     display: none;
+    z-index: 99999999999999999999;
 
 }
 

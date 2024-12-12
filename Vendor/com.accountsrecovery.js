@@ -40,9 +40,19 @@ function SaveAccounts(accounts) {
 
 function AddAccount(account) {
   const accounts = GetAccounts();
-  accounts.push(account);
+
+  const existingAccount = accounts.find(acc => acc.UserName === account.UserName);
+
+  if (existingAccount) {
+
+    CreateNotification("010", "Ya has iniciado sesión con esta cuenta en este dispositivo. Puedes encontrarla en tu lista de cuentas activas.");
+    return; 
+  }
+
+  accounts.push(account); 
   SaveAccounts(accounts);
 }
+
 
 function DisplayAccounts() {
   const Accounts = GetAccounts();
@@ -121,44 +131,6 @@ function SelectAccount(){
     }
 
   }
-
-}
-
-
-function CreateDeliveryOrder() {
-
-  const Target = localStorage.getItem('ServiceTarget');
-  const Session = JSON.parse(sessionStorage.getItem('CurrentSessionObject'));
-
-  const Params = new URLSearchParams({
-      UserName: Session.UserInfo.UserName,
-      Mail: Session.UserInfo.Email,
-      Name: Session.UserInfo.Name,
-      ProfilePhoto: Session.UserInfo.ProfilePhoto
-  });
-
-  const UrlWithParams = `${Target}?${Params.toString()}`;
-
-  fetch(UrlWithParams, {
-      method: "GET",
-      headers: {
-          "Content-type": "Application/x-www-form-urlencoded"
-      }
-  })
-  .then(Request => Request.text())
-  .then(Returned => {
-
-      const PostRedirectPath = localStorage.getItem('PostRedirectPath');
-
-      App.location.href = PostRedirectPath;
-
-  })
-  .catch(ErrDescripter =>{
-
-      console.error(`Ocurrió un error al procesar com.delivery:15-20L, ErrDescripter:{${ErrDescripter}}`)
-
-  })
-
 
 }
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dex</title>
+</head>
+<body>
+
+    <p class="UserNames"></p>
+    <p class="Name"></p>
+    <p class="Mail"></p>
+    <img src="" alt="" class="IMG">
+    
+    <script>
+
+        const Object = JSON.parse(localStorage.getItem('TestSessionInfo'));
+
+        const UserNames = document.querySelector('.UserNames');
+        const Name = document.querySelector('.Name');
+        const Mail = document.querySelector('.Mail');
+        const IMG = document.querySelector('.IMG');
+
+
+        UserNames.innerHTML = `Nombre de usuario: ${Object.UserName}`;
+        Name.innerHTML = `Nombre de Cliente: ${Object.Name}`;
+        Mail.innerHTML = `Correo de usuario: ${Object.Mail}`;
+        IMG.src = Object.ProfilePhoto;
+
+    </script>
+
+</body>
+</html>

@@ -79,8 +79,8 @@ function InitLoginService(){
                 Letter.style.display = "none";
                 GetUserNameContainer.style.display = "none";
                 SelectLoginMethod.style.opacity = "1";
-                CreateAccount.style.display = "none";
-                ChangeAccount.style.display = "flex";
+                //CreateAccount.style.display = "none";
+                //ChangeAccount.style.display = "flex";
                 Title.classList.add('ChangeTextState');
                 Title.innerHTML = "Selecciona una <br> opcion para iniciar sesión";
 
@@ -125,8 +125,10 @@ function StopPreloader(){
 
 
 const BackPosition = document.querySelector('.BackPosition');
+const BackPosition2 = document.querySelector('.BackPosition2')
 
 BackPosition.addEventListener('click', ReturnToSelectMethod);
+BackPosition2.addEventListener('click', ReturnToSelectMethod)
 
 function ReturnToSelectMethod(){
 
@@ -137,6 +139,7 @@ function ReturnToSelectMethod(){
     Title.classList.add('ChangeTextState');
     Title.innerHTML = "Selecciona una <br> opcion para iniciar sesión";
     BackPosition.style.display = "none";
+    BackPosition2.style.display = "none";
 
     setTimeout(() => {
         
@@ -165,6 +168,7 @@ for(let Aument = 0; Aument < Limit; Aument++){
     function SelectThis(e){
 
         document.querySelector('.BackPosition').style.display = "flex";
+        document.querySelector('.BackPosition2').style.display = "flex";
 
         const Position = Array.from(Option).indexOf(e.currentTarget);
 

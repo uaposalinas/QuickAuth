@@ -1,3 +1,4 @@
+
 function CreateDeliveryOrder() {
 
     const Target = localStorage.getItem('ServiceTarget');
@@ -20,8 +21,9 @@ function CreateDeliveryOrder() {
     })
     .then(Request => Request.text())
     .then(Returned => {
-
         const PostRedirectPath = localStorage.getItem('PostRedirectPath');
+
+        console.log(Returned)
 
         App.location.href = PostRedirectPath;
 
