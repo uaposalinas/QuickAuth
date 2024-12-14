@@ -1510,6 +1510,19 @@ div.spinners {
 
 }
 
+
+.EditAccounsts{
+
+    position:absolute;
+    top:18px;
+    right:55px;
+    cursor: pointer;
+    font-size:25px;
+    color:#b88648;
+    display: none;
+
+}
+
 @media screen and (max-width:1095px) {
 
     html{

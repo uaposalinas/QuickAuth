@@ -125,7 +125,7 @@ function StopPreloader(){
 
 
 const BackPosition = document.querySelector('.BackPosition');
-const BackPosition2 = document.querySelector('.BackPosition2')
+const BackPosition2 = document.querySelector('.BackPosition2');
 
 BackPosition.addEventListener('click', ReturnToSelectMethod);
 BackPosition2.addEventListener('click', ReturnToSelectMethod)

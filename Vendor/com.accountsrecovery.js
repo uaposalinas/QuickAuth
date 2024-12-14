@@ -2,6 +2,7 @@ const DeviceSessions = localStorage.getItem('DeviceSessions');
 const AccTi = document.querySelector('.AccTi');
 const ReturnExistAccounts = document.querySelector('.ReturnExistAccounts');
 const AccountSelector = document.querySelector('.AccountSelector');
+const EditAccounsts = document.querySelector('.EditAccounsts');
 
 if(DeviceSessions){
 
@@ -9,6 +10,7 @@ if(DeviceSessions){
     document.querySelector('.GetUserNameContainer').style.display = "none";
     ReturnExistAccounts.style.display = "flex";
     AccountSelector.style.display = "flex";
+
     DisplayAccounts();
     SelectAccount()
 

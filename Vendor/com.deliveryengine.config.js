@@ -21,11 +21,19 @@ function CreateDeliveryOrder() {
     })
     .then(Request => Request.text())
     .then(Returned => {
+        
         const PostRedirectPath = localStorage.getItem('PostRedirectPath');
 
-        console.log(Returned)
+        if(window.opener){
 
-        App.location.href = PostRedirectPath;
+            window.opener.postMessage({ Redirect: PostRedirectPath }, '*');
+            window.close();
+
+        }else{
+
+            window.location.href = PostRedirectPath
+
+        }
 
     })
     .catch(ErrDescripter =>{

@@ -193,7 +193,7 @@ function ChangeTheAccount(){
     Title.classList.add('ChangeTextState');
     Title.innerHTML = "Escribe tu @ <br> e inicia sesión";
     GetUserNameForLogin.value = "";
-    document.querySelector('.BackPosition2').style.display = "none"
+    document.querySelector('.BackPosition2').style.display = "none";
 
     setTimeout(() => {
         
