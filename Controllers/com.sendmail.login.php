@@ -30,9 +30,9 @@
             $MailService->isSMTP();                                            
             $MailService->Host       = 'mail.dexly.space';                 
             $MailService->SMTPAuth   = true;                               
-            $MailService->Username   = 'team@dexly.space';                    
+            $MailService->Username   = 'services@dexly.space';                    
             $MailService->Password   = 'Dv229011000$';                              
-            $MailService->SMTPSecure = "ssl";           
+            $MailService->SMTPSecure = "SSL";           
             $MailService->Port       = 465;                                
         
             $MailService->setFrom('team@dexly.space', 'Inicio de sesión de Hello ID');
