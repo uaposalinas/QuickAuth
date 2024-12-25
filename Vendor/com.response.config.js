@@ -14,7 +14,7 @@ const Password = GetPass;
 
 const LoginDescriptionToken = document.querySelector('.LoginDescriptionToken');
 
-LoginDescriptionToken.innerHTML = `Estás intentando iniciar sesión en ${UserName} utilizando DevLabs Passkeys pulsa el botón Autorizar y escribe el código en el dispositivo donde estás tratando de iniciar sesión.`
+LoginDescriptionToken.innerHTML = `Estás intentando iniciar sesión en ${UserName} utilizando Dexly Passkeys pulsa el botón Autorizar y escribe el código en el dispositivo donde estás tratando de iniciar sesión.`
 
 //Primer Digito
 

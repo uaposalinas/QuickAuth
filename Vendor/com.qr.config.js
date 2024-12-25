@@ -50,7 +50,7 @@ function InitCodeLogService(){
 
     })
 
-    const Url = `https://helloid.devlabsco.space/access/login/service/Response/Qr?Token=${Token}`
+    const Url = `https://helloid.dexly.space/access/login/service/Response/Qr?Token=${Token}`
 
     new QRCode(QrContainer, Url);
     QrContainer.title = "";

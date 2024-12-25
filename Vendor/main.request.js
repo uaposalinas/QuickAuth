@@ -129,14 +129,14 @@ function SetLoginService(ServiceKey){
 
         }else if(QueryResults.access == "false"){
 
-            App.location.href = "https://helloid.devlabsco.space";
+            App.location.href = "https://helloid.dexly.space";
 
         }
         
     })
     .catch(redirect => {
 
-        App.location.href = "https://helloid.devlabsco.space";
+        App.location.href = "https://helloid.dexly.space";
 
     })
 
@@ -175,7 +175,7 @@ document.querySelector('.CreateAccount').addEventListener('click', CreateNewAcco
 
 function CreateNewAccount(){
 
-    window.location.href = "https://helloid.devlabsco.space/access/signin/service/request/";
+    window.location.href = "https://helloid.dexly.space/access/signin/service/request/";
 
 }
 

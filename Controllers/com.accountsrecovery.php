@@ -58,7 +58,7 @@
 
     }else{
 
-        header("Location: https://helloid.devlabsco.space");
+        header("Location: https://helloid.dexly.space");
 
     }
 

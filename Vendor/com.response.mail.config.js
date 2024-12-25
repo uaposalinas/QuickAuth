@@ -111,7 +111,7 @@ function AuthRequest(){
     
                     setTimeout(() => {
                         
-                        window.location.href = "https://helloid.devlabsco.space/account/";
+                        window.location.href = "https://helloid.dexly.space/account/";
     
                     }, 3000);
     

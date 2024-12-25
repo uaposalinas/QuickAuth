@@ -29,18 +29,18 @@ function InitService(){
 
         if(RemoveSpaces == "error"){
 
-            window.location.href = "https://helloid.devlabsco.space"; 
+            window.location.href = "https://helloid.dexly.space"; 
 
         }else{
 
-            LoginDescriptionToken.innerHTML = `Estás intentando iniciar sesión en ${RemoveSpaces} utilizando DevLabs Passkeys pulsa el botón Autorizar y escribe el código en el dispositivo donde estás tratando de iniciar sesión si es necesario.`;
+            LoginDescriptionToken.innerHTML = `Estás intentando iniciar sesión en ${RemoveSpaces} utilizando Dexly Passkeys pulsa el botón Autorizar y escribe el código en el dispositivo donde estás tratando de iniciar sesión si es necesario.`;
 
         }
 
     })
     .catch(Redirect => {
 
-        window.location.href = "https://helloid.devlabsco.space?Cause="+Redirect;
+        window.location.href = "https://helloid.dexly.space?Cause="+Redirect;
 
     })
 

@@ -28,14 +28,14 @@
 
             $MailService->SMTPDebug = 0;                      
             $MailService->isSMTP();                                            
-            $MailService->Host       = 'mail.devlabsco.space';                 
+            $MailService->Host       = 'mail.dexly.space';                 
             $MailService->SMTPAuth   = true;                               
-            $MailService->Username   = 'team@devlabsco.space';                    
+            $MailService->Username   = 'team@dexly.space';                    
             $MailService->Password   = 'Dv229011000$';                              
             $MailService->SMTPSecure = "ssl";           
             $MailService->Port       = 465;                                
         
-            $MailService->setFrom('team@devlabsco.space', 'Inicio de sesión de Hello ID');
+            $MailService->setFrom('team@dexly.space', 'Inicio de sesión de Hello ID');
             $MailService->addAddress("$Mail", "$AccountName");    
      
         
@@ -220,7 +220,7 @@
                                                                 <tr>
                                                                     <td style='width:64px;'>
 
-                                                                        <img alt='Hello ID Logo' height='auto' src='https://helloid.devlabsco.space/assets/images/logo.png' style='border:0;display:block;outline:none;text-decoration:none;width:100%;' width='64' />
+                                                                        <img alt='Hello ID Logo' height='auto' src='https://helloid.dexly.space/assets/images/logo.png' style='border:0;display:block;outline:none;text-decoration:none;width:100%;' width='64' />
 
                                                                     </td>
                                                                 </tr>
@@ -274,7 +274,7 @@
                                                         <table align='center' border='0' cellpadding='0' cellspacing='0' role='presentation' style='border-collapse:separate;line-height:100%;'>
                                                             <tr>
                                                                 <td align='center' bgcolor='transparent' role='presentation' style='border:none;border-radius:20px;color:#ffffff;cursor:auto;padding:15px 25px;' valign='middle' class='AuthButton' >
-                                                                    <a href='https://helloid.devlabsco.space/access/login/service/Response/Mail?Token=$Token' 
+                                                                    <a href='https://helloid.dexly.space/access/login/service/Response/Mail?Token=$Token' 
                                                                     style='font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif; display: inline-block; background-color: #007BFF; color: #FFFFFF; text-decoration: none; padding: 20px 20px; font-size: 16px; border-radius: 5px;'>
                                                                     Autorizar
                                                                 </a>
@@ -300,7 +300,7 @@
                                                     <td align='center' style='font-size:0px;padding:10px 25px;padding-bottom:40px;word-break:break-word;'>
 
                                                         <div style='font-family:Arial,sans-serif;font-size:16px;line-height:22px;text-align:center;color:#555;'>
-                                                            <a href='https://helloid.devlabsco.space/access/login/service/Response/Mail?Token=$Token' style='color:#2F67F6'>https://helloid.devlabsco.space/access/login/service/Response/</a>
+                                                            <a href='https://helloid.dexly.space/access/login/service/Response/Mail?Token=$Token' style='color:#2F67F6'>https://helloid.dexly.space/access/login/service/Response/</a>
                                                         </div>
 
                                                     </td>
@@ -312,8 +312,8 @@
                                                     <td align='left' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
 
                                                         <div style='font-family:Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;'>
-                                                            Enviado con amor, <br><br> Alejandro Salinas<br>DevLabs Corporation LLC Fundador & CEO<br>
-                                                            <a href='mailto:support@devlabsco.space' style='color:#2F67F6'>support@devlabsco.space</a>
+                                                            Enviado con amor, <br><br> Alejandro Salinas<br>Dexly Corporation LLC Fundador & CEO<br>
+                                                            <a href='mailto:support@dexly.space' style='color:#2F67F6'>support@dexly.space</a>
                                                         </div>
 
                                                     </td>
@@ -380,7 +380,7 @@
                                                 <td align='center' style='font-size:0px;padding:0;word-break:break-word;'>
 
                                                     <div style='font-family: Arial,sans-serif;font-size:12px;font-weight:300;line-height:1;text-align:center;color:#575757;'>
-                                                        © 2024 DevLabs Co LLC, Res. San Juan. San Pedro Sula, Cortés 21101, HN <br><br>Todos los derechos reservados.
+                                                        © 2025 Dexly Corporation LLC, Res. San Juan. San Pedro Sula, Cortés 21101, HN <br><br>Todos los derechos reservados.
                                                     </div>
 
                                                 </td>
