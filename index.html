@@ -1,33 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dex</title>
-</head>
-<body>
-
-    <p class="UserNames"></p>
-    <p class="Name"></p>
-    <p class="Mail"></p>
-    <img src="" alt="" class="IMG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Iniciar Sesión • Hello ID</title>
+    <link rel="stylesheet" href="Fonts/IndexFontsCaviarDreams.css">
+    <link rel="stylesheet" href="Fonts/IndexFontsRoboto.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>  
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>  
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="shortcut icon" href="https://helloid.dexly.space/assets/images/logo.png" type="image/x-icon">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
     
+
     <script>
 
-        const Object = JSON.parse(localStorage.getItem('TestSessionInfo'));
+        const FileLocation = "Vendor/com.request.config.css?v="+Math.random();
+        const Styles = document.createElement('link');
+        Styles.rel = "stylesheet";
+        Styles.href = FileLocation;
+        Styles.type = "text/css";
+        document.head.appendChild(Styles)
 
-        const UserNames = document.querySelector('.UserNames');
-        const Name = document.querySelector('.Name');
-        const Mail = document.querySelector('.Mail');
-        const IMG = document.querySelector('.IMG');
-
-
-        UserNames.innerHTML = `Nombre de usuario: ${Object.UserName}`;
-        Name.innerHTML = `Nombre de Cliente: ${Object.Name}`;
-        Mail.innerHTML = `Correo de usuario: ${Object.Mail}`;
-        IMG.src = Object.ProfilePhoto;
 
     </script>
 
+</head> 
+
+
+<body>
+
+
+    <div class="NotificationsRenderParent">
+
+        <div class="NotificationsRender">
+
+            <p class="NotificationsContent"></p>
+
+            <div class="CloseButton">
+
+                <i class="fi fi-rr-cross-small CloseNotification"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="RequestInfo">
+
+        <div class="GlobalPreloader">
+
+            <div class="three-body">
+                <div class="three-body__dot"></div>
+                <div class="three-body__dot"></div>
+                <div class="three-body__dot"></div>
+            </div>
+
+        </div>
+        <div class="GetUserNameInfo" style="opacity: 0;">
+
+            <div class="Sides HideInResponsiveMode">
+
+                <i class="fi fi-br-angle-small-left BackPosition"></i>
+
+                <div class="Letter">
+
+                    <div class="Important">Nueva Característica</div>
+                    <p>Inicio de sesión rápido QuickAuth™</p>
+
+                </div>
+
+                <p class="Title AccTi">
+
+                    Escribe tu @
+                    <br>
+                    e inicia sesión
+
+                </p>
+
+                <div class="CreateAccount">Crear Cuenta</div>
+
+            </div>
+
+
+            <div class="Sides ExpandInResponsive" style="position:relative; overflow: hidden;">
+
+                <i class="fi fi-br-angle-small-left BackPosition2"></i>
+
+
+                <div class="GetUserNameContainer" style="display: none;">
+
+                <i class="fi fi-br-list ReturnExistAccounts"></i>
+                <div class="ServiceIdentiderPhotoContainer">
+
+                    <div class="Identifer ServiceIdentifer"></div>
+
+                </div>
+
+                <p class="ServiceLoginTitle">Iniciar Sesión en:</p>
+                <p class="ServiceName">Eonix</p>
+                
+                <input type="text" class="GetUserNameForLogin" name="GetUserNameForLogin" placeholder="Escribe tu nombre de usuario" autocomplete="off">
+
+                <div class="ConfirmButton">Siguiente</div>
+
+                </div>
+
+                <div class="AccountSelector">
+
+                    <i class="fi fi-rr-multiple AddNewAccountButton"></i>
+                    <i class="fi fi-rr-magic-wand EditAccounsts"></i>
+
+
+                    <div class="ServiceIdentiderPhotoContainer">
+
+                        <div class="Identifer ServiceIdentifer2"></div>
+    
+                    </div>
+    
+                    <p class="ServiceLoginTitle Resize">Selecciona una cuenta para iniciar en:</p>
+                    <p class="ServiceName2">Eonix</p>
+                    
+
+                    <div class="SelectorPreloader">
+
+                        <div class="spinners">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                            <div class="bar4"></div>
+                            <div class="bar5"></div>
+                            <div class="bar6"></div>
+                            <div class="bar7"></div>
+                            <div class="bar8"></div>
+                            <div class="bar9"></div>
+                            <div class="bar10"></div>
+                            <div class="bar11"></div>
+                            <div class="bar12"></div>
+                          </div>
+
+                    </div>
+
+                </div>
+
+                <div class="SelectLoginMethod">
+
+                    <div class="UserProfilePhotoContainer">
+
+                        <div class="ProfilePhotoPreloader">
+
+                            <div class="three-body">
+                                <div class="three-body__dot"></div>
+                                <div class="three-body__dot"></div>
+                                <div class="three-body__dot"></div>
+                            </div>
+                            
+          
+                      </div>
+
+                        <div class="UserProfilePhoto"></div>
+
+                    </div>
+                    <p class="AccountName">Nombre de Usuario</p>
+
+                    <div class="LoginOptions">
+
+                       <div class="Option">
+
+                        <i class="fi fi-rr-keyboard"></i>                        
+                        <p>Contraseña</p>
+
+                       </div>
+
+         
+                       <div class="Option">
+
+                        <i class="fi fi-rr-at" style="font-size:17px;"></i>
+                        <p>Correo Electrónico</p>
+
+                       </div>
+
+                       <div class="Option HideInResponsiveMode">
+
+                        <i class="fi fi-ss-qr-scan" style="font-size:17px;"></i>                        
+                        <p>Código QR o Passkey</p>
+
+                       </div>
+
+                       <div class="Option HideOutResponsiveMode ChangeAccount">
+
+                        <i class="fi fi-rr-replace" style="font-size:17px;"></i>
+                        <p>Cambiar de cuenta</p>
+
+                       </div>
+
+                    </div>
+
+                </div>
+
+                <div class="LoginWithPassword">
+
+                    <div class="StepIdentifer"></div>
+                    <p class="AccountName">Escribe tu contraseña</p>
+
+                    <input type="password" class="GetUserPasswordForLogin" name="GetUserPasswordForLogin" placeholder="Escribe tu contraseña" autocomplete="off">
+
+                    <div class="LoginWithPasswordButton" style="right: unset !important; bottom:30px; height:35px;">Iniciar Sesión</div>
+
+
+                </div>
+
+                <div class="LoginWithMail">
+
+                    <div class="StepIdentiferVariable"></div>
+                    <p class="ShowMailProcess">Te lo estamos enviando</p>
+                    <div class="ProcessDescripter Spliter">Usualmente esto tarda hasta 3 segundos</div>
+
+                </div>
+
+                <div class="TermsAndConditionsAboutLogin">
+
+                    
+                    <div class="TermsIcon"></div>
+                    <p class="TermsTitle"> ¿Hello ID puede compartir datos con Eonix?</p>
+
+                    <div class="Text">
+                        <p class="DisclamerInfo">
+                           
+                        </p>
+                      
+                    </div>
+                    
+                    <div class="Buttons">
+
+                        <button class="NoApprove">Cancelar</button>
+                        <button class="Approve">Sí, autorizo</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+            <div class="Preloader">
+
+                <div class="three-body">
+                    <div class="three-body__dot"></div>
+                    <div class="three-body__dot"></div>
+                    <div class="three-body__dot"></div>
+                </div>
+                  
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="LogPage">
+
+        <div class="SensePath"></div>
+        <div class="QR"> <pre class="pre"></pre> </div>
+        <t class="TitleScale1">Escanea el código para iniciar sesión</t>
+        <p class="DescriptionScale1">Escanea este codigo en un dispositivo donde ya hayas iniciado sesión.</p>
+        
+        <p class="Instructions" style="height: 50px;">Ve a la app de Hello ID en tu teléfono, luego haz clic en tu foto de perfil y pulsa en el ícono <i class="fi fi-br-key-skeleton-left-right Demo"></i> y después en el ícono <i class="fi fi-br-plus Demo"></i> de la esquina superior derecha.</p>
+        <p class="Instructions2" style="height: 50px;">Si estás en un iPhone puedes acceder a tu panel de control y pulsar en el icono <i class="fi fi-br-qr-scan Demo"></i> luego apunta la cámara al código QR y pulsa <i class="Demo"> <ion-icon name="compass-outline"></ion-icon> </i> para acceder al navegador e iniciar sesión. </p>
+        <p class="Instructions3">También puedes abrir la app de tu cámara o Google Lens, apuntar al código QR y hacer clic en él cuando aparezca.</p>
+
+        <div class="link">¿Necesitas más ayuda?</div>
+
+        <div class="GoToCode BackLogin">Cancelar</div>
+
+    </div>
+
+    <div class="GetCode">
+
+        <div class="IconFather">
+
+            <div class="Icon"></div>
+
+        </div>
+
+        <t class="TitleScale3">Estamos confirmando que eres tú</t>
+
+        <div class="GetCodesInputs">
+
+            <input type="number" class="GetCodeForThis">
+            <input type="number" class="GetCodeForThis">
+            <input type="number" class="GetCodeForThis">
+            -
+            <input type="number" class="GetCodeForThis">
+            <input type="number" class="GetCodeForThis">
+            <input type="number" class="GetCodeForThis">
+
+        </div>
+
+        <div class="SendCode">Siguiente</div>
+
+    </div>
+
+    <div class="PostLogin"></div>
+
+    <div class="TokenInfo" hidden></div>
+
+
+
 </body>
+
+    <script defer src="Vendor/qrcode.min.js?v=150"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="Vendor/com.request.getin.js?v=150"></script>
+    <script src="Vendor/com.mail.login.js"></script>
+    <script src="Vendor/main.request.js" defer></script>
+    <script src="Vendor/com.qr.config.js" defer></script>
+    <script src="Vendor/com.accountsrecovery.js?v=5000" defer></script>
+    <script src="Vendor/com.deliveryengine.config.js"></script>
+
 </html>
+
+
+<div class="DevENC"></div>
+
+
+
+
+
+

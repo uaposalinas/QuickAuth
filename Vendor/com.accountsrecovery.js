@@ -109,7 +109,7 @@ function SelectAccount(){
         
         const UserName = this.getAttribute("user-name");
 
-        fetch('../Controllers/com.accountsrecovery.php', {
+        fetch('Controllers/com.accountsrecovery.php', {
   
           method: "POST",
           headers: {

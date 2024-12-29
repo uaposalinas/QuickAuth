@@ -42,7 +42,7 @@ function InitLoginService(){
 
         Preloader.style.display = "flex";
 
-        fetch('../Controllers/com.get.login.php', {
+        fetch('Controllers/com.get.login.php', {
 
             method:"POST",
             headers:{
@@ -254,7 +254,7 @@ function ConfirmPassword(){
     }else{
 
         
-    fetch('../Controllers/com.check.pass.log.php', {
+    fetch('Controllers/com.check.pass.log.php', {
 
         method: "POST",
         headers:{

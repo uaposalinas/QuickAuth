@@ -75,7 +75,7 @@ function SetLoginService(ServiceKey){
 
     const Key = ServiceKey;
 
-    fetch('../Controllers/com.detect.servicemap.php', {
+    fetch('Controllers/com.detect.servicemap.php', {
 
         method:"POST",
         headers:{
@@ -136,7 +136,7 @@ function SetLoginService(ServiceKey){
     })
     .catch(redirect => {
 
-        App.location.href = "https://helloid.dexly.space";
+        App.location.href = "https://google.com";
 
     })
 

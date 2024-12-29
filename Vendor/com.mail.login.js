@@ -65,7 +65,7 @@ function InitMailLogService(){
     const NewLoginRequest = new MailInfo(AccountName, GetUserName, GetUserMail);
 
 
-    fetch('../Controllers/com.sendmail.login.php', {
+    fetch('Controllers/com.sendmail.login.php', {
 
         method: "POST",
         headers: {
@@ -107,7 +107,7 @@ function MailSentFailed(){
     const ShowMailProcess = document.querySelector('.ShowMailProcess');
     const ProcessDescripter = document.querySelector('.ProcessDescripter');
 
-    StepIdentiferVariable.style.backgroundImage = "url(../Assets/MailError.gif)";
+    StepIdentiferVariable.style.backgroundImage = "url(Assets/MailError.gif)";
     ShowMailProcess.classList.add('ChangeTextState');
     ShowMailProcess.innerHTML = "Ocurrió un error al iniciar sesión";
     ProcessDescripter.classList.add("ChangeTextState");
@@ -128,7 +128,7 @@ function EmailSentForVerfication(){
     const ShowMailProcess = document.querySelector('.ShowMailProcess');
     const ProcessDescripter = document.querySelector('.ProcessDescripter');
 
-    StepIdentiferVariable.style.backgroundImage = "url(../Assets/MailSent.gif)";
+    StepIdentiferVariable.style.backgroundImage = "url(Assets/MailSent.gif)";
     ShowMailProcess.classList.add('ChangeTextState');
     ShowMailProcess.innerHTML = "Enviamos un mensaje a:";
     ProcessDescripter.classList.add("ChangeTextState");
@@ -175,7 +175,7 @@ function CheckCurrentMailStatus(){
 
     setInterval(() => {
         
-        fetch('../Controllers/com.check.mail.log.php', {
+        fetch('Controllers/com.check.mail.log.php', {
 
             method:"POST",
             headers: {
@@ -191,7 +191,7 @@ function CheckCurrentMailStatus(){
 
             if(Information == "Pending"){
 
-                StepIdentiferVariable.style.backgroundImage = "url(../Assets/ApprovePending.gif)";
+                StepIdentiferVariable.style.backgroundImage = "url(Assets/ApprovePending.gif)";
                 ShowMailProcess.classList.add('ChangeTextState');
                 ShowMailProcess.innerHTML = "Aprobación pendiente";
                 ProcessDescripter.classList.add("ChangeTextState");
@@ -199,7 +199,7 @@ function CheckCurrentMailStatus(){
 
             }else if(Information == "Completed"){
 
-                StepIdentiferVariable.style.backgroundImage = "url(../Assets/Login.gif)";
+                StepIdentiferVariable.style.backgroundImage = "url(Assets/Login.gif)";
                 ShowMailProcess.classList.add('ChangeTextState');
                 ShowMailProcess.innerHTML = "Estamos iniciando sesión";
                 ProcessDescripter.classList.add("ChangeTextState");
